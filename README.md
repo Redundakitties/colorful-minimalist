@@ -3,7 +3,7 @@
 
 Colorful Sidebery tabs created by me and minimalist buttons taken from [here](https://github.com/MrOtherGuy/firefox-csshacks)
 
-![Preview](https://gifs.com/gif/firefox-tweaks-vlKJZm)
+![Preview](https://github.com/Redundakitties/image-videos/blob/main/firefox%20tweaks.gif)
 
 Setup
 ======
