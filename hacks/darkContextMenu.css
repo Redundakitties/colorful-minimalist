@@ -1,0 +1,613 @@
+/* -------------------------------------------------- Dark context menus ----------------------------------------*/
+:root {
+    --uc-menu-bkgnd: rgba(9, 35, 75, 0.877);
+    --uc-menu-color: rgb(128, 163, 228);
+    --uc-menu-dimmed: rgba(249, 249, 250, 0.1);
+    --uc-menu-disabled: rgba(249, 249, 250, 0.5);
+    --uc-menu-separator: rgba(249, 249, 250, 0.1);
+    --uc-menu-border: rgba(249, 249, 250, 0.1);
+}
+
+.subviewbutton.panel-subview-footer,
+.panel-footer {
+    background: var(--arrowpanel-background) !important;
+}
+
+menuitem.panel-subview-footer:not(:is([disabled], :active))[_moz-menuactive],
+.subviewbutton.panel-subview-footer:not(:is([disabled], [open], :active)):is(:hover, :focus) {
+    background: var(--arrowpanel-dimmed) !important;
+}
+
+menuitem.panel-subview-footer:not([disabled])[_moz-menuactive]:active,
+.subviewbutton.panel-subview-footer:not([disabled]):is([open], :hover:active) {
+    background: var(--arrowpanel-dimmed-further) !important;
+    box-shadow: none !important;
+}
+
+menupopup,
+menu,
+menuitem,
+menucaption {
+    -moz-appearance: none !important;
+}
+
+menu,
+menuitem,
+menucaption {
+    min-height: 1.8em;
+}
+
+.bookmark-item,
+.menu-iconic,
+.menuitem-iconic {
+    max-height: 24px !important;
+    line-height: 16px !important;
+    border: none !important;
+}
+
+.menu-accel,
+.menu-iconic-accel,
+.menu-text,
+.menu-iconic-text,
+.menu-iconic-highlightable-text {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#context-navigation .menuitem-iconic {
+    max-height: none !important;
+}
+
+menupopup:not(.PanelUI-subView),
+#main-menubar > menu > menupopup,
+#context-navigation,
+menucaption {
+    color: var(--uc-menu-color) !important;
+    background: var(--uc-menu-bkgnd) !important;
+    border-color: var(--uc-menu-border) !important;
+}
+
+.menu-iconic-left,
+.menu-iconic-text,
+.menu-iconic-highlightable-text {
+    color: var(--uc-menu-color) !important;
+}
+
+menu:hover:not(.panel-subview-footer),
+menu[_moz-menuactive]:not(.panel-subview-footer),
+menu[open]:not(.panel-subview-footer),
+menuitem:hover:not(.panel-subview-footer),
+menuitem[_moz-menuactive]:not(.panel-subview-footer) {
+    background-color: var(--uc-menu-dimmed) !important;
+    color: inherit !important;
+}
+
+menu:not(.subviewbutton) > .menu-right {
+    filter: invert(1);
+}
+
+menu:not(.subviewbutton)[disabled="true"] > .menu-right {
+    filter: none;
+    color: var(--uc-menu-disabled) !important;
+}
+
+.menu-iconic-left[disabled="true"],
+.menu-iconic-text[disabled="true"],
+.menu-iconic-highlightable-text[disabled="true"],
+.bookmark-item[disabled="true"],
+.menu-iconic[disabled="true"],
+.menuitem-iconic[disabled="true"],
+menu[disabled="true"],
+menuitem[disabled="true"],
+menucaption[disabled="true"],
+.menu-iconic-left[disabled="true"][_moz-menuactive],
+.menu-iconic-text[disabled="true"][_moz-menuactive],
+.bookmark-item[disabled="true"][_moz-menuactive],
+.menu-iconic[disabled="true"][_moz-menuactive],
+.menuitem-iconic[disabled="true"][_moz-menuactive],
+menu[disabled="true"][_moz-menuactive],
+menucaption[disabled="true"][_moz-menuactive],
+menuitem[disabled="true"][_moz-menuactive] {
+    color: var(--uc-menu-disabled) !important;
+}
+
+menupopup:not(.PanelUI-subView) {
+    padding: 4px 0px !important;
+}
+
+menupopup menuitem:not(.subviewbutton),
+menupopup menu:not(.subviewbutton),
+#contentAreaContextMenu menuitem,
+#contentAreaContextMenu menu {
+    padding: 4px 8px !important;
+}
+
+#context-navigation {
+    padding: 0px !important;
+}
+
+#BMB_bookmarksPopup menupopup[placespopup="true"] {
+    background: transparent !important;
+}
+
+menuseparator:not(.PanelUI-subView) {
+    -moz-appearance: none !important;
+    margin: 4px 10px !important;
+    height: 1px !important;
+    border: none !important;
+    background: var(--uc-menu-separator) !important;
+    padding: 0 !important;
+}
+
+treechildren::-moz-tree-separator {
+    border-color: var(--uc-menu-separator) !important;
+    border-bottom: none !important;
+}
+
+.PanelUI-subView menuseparator,
+#context-sep-navigation {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.PanelUI-subView menuseparator.small-separator {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+.panel-subview-body {
+    padding: 4px 0 !important;
+}
+
+#widget-overflow-mainView > .panel-subview-body > toolbarseparator,
+.PanelUI-subView menuseparator,
+.PanelUI-subView toolbarseparator,
+.cui-widget-panelview menuseparator,
+.cui-widget-panel toolbarseparator {
+    margin: 4px 0 !important;
+}
+
+.PanelUI-subView toolbarseparator[orient="vertical"] {
+    margin-inline-start: 6px !important;
+    margin-inline-end: 7px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+toolbaritem#appMenu-fxa-container.toolbaritem-combined-buttons {
+    margin-inline-end: 0px !important;
+}
+
+.customization-uidensity-menuitem {
+    max-height: none !important;
+}
+
+toolbarbutton.subviewbutton.highlight.subviewbutton-iconic.bookmark-item {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/*Bookmark bar spacing*/
+toolbarbutton.bookmark-item:not(.subviewbutton) {
+    margin: 0 1px !important;
+    padding: 5px !important;
+}
+
+:root[uidensity=compact] toolbarbutton.bookmark-item:not(.subviewbutton) {
+    margin: 0 1px !important;
+    padding: 1px 4px !important;
+}
+
+:root[uidensity=touch] toolbarbutton.bookmark-item:not(.subviewbutton) {
+    padding: 8px !important;
+}
+
+/* Fucking back button */
+
+:root:not([uidensity="compact"]) #back-button {
+    border-radius: unset !important;
+    margin-left: 2px !important;
+    padding-right: 3px !important;
+}
+
+:root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
+    background-color: unset !important;
+    border: unset !important;
+    border-radius: var(--toolbarbutton-border-radius) !important;
+    width: 28px !important;
+    height: 28px !important;
+    padding: 6px !important;
+}
+
+:root[uidensity="touch"] #back-button {
+    margin-left: 4px !important;
+}
+
+:root[uidensity="touch"] #back-button > .toolbarbutton-icon {
+    width: 34px !important;
+    height: 34px !important;
+    padding: 9px !important;
+}
+
+:root:not([uidensity="compact"]) #back-button:hover:not([disabled]) > .toolbarbutton-icon {
+    background-color: var(--toolbarbutton-hover-background) !important;
+}
+
+:root:not([uidensity="compact"]) #back-button:active:not([disabled]) > .toolbarbutton-icon {
+    background-color: var(--toolbarbutton-active-background) !important;
+}
+
+/*Remove "update available" badge*/
+
+#PanelUI-menu-button[badge-status="update-available"],
+#PanelUI-menu-button[badge-status="update-downloading"],
+#PanelUI-menu-button[badge-status="update-manual"],
+#PanelUI-menu-button[badge-status="update-restart"] {
+    list-style-image: url("chrome://browser/skin/menu.svg") !important;
+}
+
+#PanelUI-menu-button[badge-status="update-available"] > .toolbarbutton-badge-stack > .toolbarbutton-badge,
+#PanelUI-menu-button[badge-status="update-downloading"] > .toolbarbutton-badge-stack > .toolbarbutton-badge,
+#PanelUI-menu-button[badge-status="update-manual"] > .toolbarbutton-badge-stack > .toolbarbutton-badge,
+#PanelUI-menu-button[badge-status="update-restart"] > .toolbarbutton-badge-stack > .toolbarbutton-badge {
+    opacity: 0 !important;
+}
+
+/* ---------------------------context menus-------------------------------- */
+#toolbar-context-menu,
+#tabContextMenu,
+#contentAreaContextMenu,
+#back-button > menupopup,
+#forward-button > menupopup,
+#backForwardMenu,
+#placesContext,
+#viewButton > menupopup,
+#pageActionContextMenu,
+.urlbar-input-box .textbox-contextmenu,
+#widget-overflow #customizationPanelItemContextMenu,
+.search-one-offs-context-menu,
+#SyncedTabsSidebarContext,
+.textbox-contextmenu,
+#customizationPanelItemContextMenu,
+#customizationPaletteItemContextMenu,
+#customization-toolbar-menu,
+#main-menubar menupopup,
+#toolbar-context-menu menupopup,
+#tabContextMenu menupopup,
+#contentAreaContextMenu menupopup,
+#back-button > menupopup menupopup,
+#forward-button > menupopup menupopup,
+#backForwardMenu menupopup,
+#toolbar-context-menu menupopup,
+#placesContext menupopup,
+#viewButton > menupopup menupopup,
+#pageActionContextMenu menupopup,
+.urlbar-input-box .textbox-contextmenu menupopup,
+#widget-overflow #customizationPanelItemContextMenu menupopup,
+.search-one-offs-context-menu menupopup,
+#SyncedTabsSidebarContext menupopup,
+.textbox-contextmenu menupopup,
+#customizationPanelItemContextMenu menupopup,
+#customizationPaletteItemContextMenu menupopup,
+#customization-toolbar-menu menupopup {
+    -moz-appearance: none !important;
+    background: #061a38f6 !important;
+    border: none !important;
+    border-radius: 3px !important;
+    margin: 0px 0 0 0 !important;
+    overflow: hidden !important;
+}
+
+.panel-arrowcontent {
+    border-radius: 5px !important;
+    overflow: hidden !important;
+}
+
+#toolbar-context-menu menuseparator,
+#tabContextMenu menuseparator,
+#contentAreaContextMenu menuseparator,
+#back-button > menupopup menuseparator,
+#forward-button > menupopup menuseparator,
+#backForwardMenu menuseparator,
+#toolbar-context-menu menuseparator,
+#placesContext menuseparator,
+#viewButton > menupopup menuseparator,
+#pageActionContextMenu menuseparator,
+.urlbar-input-box .textbox-contextmenu menuseparator,
+#widget-overflow #customizationPanelItemContextMenu menuseparator,
+.search-one-offs-context-menu menuseparator,
+#SyncedTabsSidebarContext menuseparator,
+.textbox-contextmenu menuseparator,
+#customizationPanelItemContextMenu menuseparator,
+#customizationPaletteItemContextMenu menuseparator,
+#customization-toolbar-menu menuseparator,
+#main-menubar menupopup menuseparator {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+#toolbar-context-menu :-moz-any(menuitem, menu),
+#tabContextMenu :-moz-any(menuitem, menu),
+#contentAreaContextMenu :-moz-any(menuitem, menu),
+#back-button > menupopup :-moz-any(menuitem, menu),
+#forward-button > menupopup :-moz-any(menuitem, menu),
+#backForwardMenu :-moz-any(menuitem, menu),
+#toolbar-context-menu :-moz-any(menuitem, menu),
+#placesContext :-moz-any(menuitem, menu),
+#viewButton > menupopup :-moz-any(menuitem, menu),
+#pageActionContextMenu :-moz-any(menuitem, menu),
+.urlbar-input-box .textbox-contextmenu :-moz-any(menuitem, menu),
+#widget-overflow #customizationPanelItemContextMenu :-moz-any(menuitem, menu),
+.search-one-offs-context-menu :-moz-any(menuitem, menu),
+#SyncedTabsSidebarContext :-moz-any(menuitem, menu),
+.textbox-contextmenu :-moz-any(menuitem, menu),
+#customizationPanelItemContextMenu :-moz-any(menuitem, menu),
+#customizationPaletteItemContextMenu :-moz-any(menuitem, menu),
+#customization-toolbar-menu :-moz-any(menuitem, menu),
+#main-menubar menupopup :-moz-any(menuitem, menu) {
+    -moz-appearance: none !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    padding: 0 0 0 0 !important;
+    min-height: 25px !important;
+}
+
+#toolbar-context-menu :-moz-any(menuitem, menu)[disabled="true"],
+#tabContextMenu :-moz-any(menuitem, menu)[disabled="true"],
+#contentAreaContextMenu :-moz-any(menuitem, menu)[disabled="true"],
+#back-button > menupopup :-moz-any(menuitem, menu)[disabled="true"],
+#forward-button > menupopup :-moz-any(menuitem, menu)[disabled="true"],
+#backForwardMenu :-moz-any(menuitem, menu)[disabled="true"],
+#toolbar-context-menu :-moz-any(menuitem, menu)[disabled="true"],
+#placesContext :-moz-any(menuitem, menu)[disabled="true"],
+#viewButton > menupopup :-moz-any(menuitem, menu)[disabled="true"],
+#pageActionContextMenu :-moz-any(menuitem, menu)[disabled="true"],
+.urlbar-input-box .textbox-contextmenu :-moz-any(menuitem, menu)[disabled="true"],
+#widget-overflow #customizationPanelItemContextMenu :-moz-any(menuitem, menu)[disabled="true"],
+.search-one-offs-context-menu :-moz-any(menuitem, menu)[disabled="true"],
+#SyncedTabsSidebarContext :-moz-any(menuitem, menu)[disabled="true"],
+.textbox-contextmenu :-moz-any(menuitem, menu)[disabled="true"],
+#customizationPanelItemContextMenu :-moz-any(menuitem, menu)[disabled="true"],
+#customizationPaletteItemContextMenu :-moz-any(menuitem, menu)[disabled="true"],
+#customization-toolbar-menu :-moz-any(menuitem, menu)[disabled="true"],
+#main-menubar menupopup :-moz-any(menuitem, menu)[disabled="true"] {
+    -moz-appearance: none !important;
+    color: rgba(255, 255, 255, 0.45) !important;
+    background-color: initial !important;
+}
+
+#toolbar-context-menu menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#tabContextMenu menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#contentAreaContextMenu menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#back-button > menupopup menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#forward-button > menupopup menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#backForwardMenu menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#toolbar-context-menu menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#placesContext menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#viewButton > menupopup menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#pageActionContextMenu menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+.urlbar-input-box
+    .textbox-contextmenu
+    menuseparator:not(:first-of-type):not([hidden="true"])
+    + :-moz-any(menu, menuitem),
+#widget-overflow
+    #customizationPanelItemContextMenu
+    menuseparator:not(:first-of-type):not([hidden="true"])
+    + :-moz-any(menu, menuitem),
+.search-one-offs-context-menu menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#SyncedTabsSidebarContext menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+.textbox-contextmenu menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#customizationPanelItemContextMenu menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#customizationPaletteItemContextMenu menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#customization-toolbar-menu menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem),
+#main-menubar menupopup menuseparator:not(:first-of-type):not([hidden="true"]) + :-moz-any(menu, menuitem) {
+    border-image: linear-gradient(
+        to right,
+        transparent 1%,
+        #363A59CC 40%,
+        #363a59 50%,
+        #363A59CC 60%,
+        transparent 99%
+    ) !important;
+    border-image-slice: 1 !important;
+    border-top-width: 1px !important;
+    border-top-style: solid !important;
+}
+#toolbar-context-menu :-moz-any(menuitem, menu) image,
+#tabContextMenu :-moz-any(menuitem, menu) image,
+#contentAreaContextMenu :-moz-any(menuitem, menu) image,
+#back-button > menupopup :-moz-any(menuitem, menu) image,
+#forward-button > menupopup :-moz-any(menuitem, menu) image,
+#backForwardMenu :-moz-any(menuitem, menu) image,
+#toolbar-context-menu :-moz-any(menuitem, menu) image,
+#placesContext :-moz-any(menuitem, menu) image,
+#viewButton > menupopup :-moz-any(menuitem, menu) image,
+#pageActionContextMenu :-moz-any(menuitem, menu) image,
+.urlbar-input-box .textbox-contextmenu :-moz-any(menuitem, menu) image,
+#widget-overflow #customizationPanelItemContextMenu :-moz-any(menuitem, menu) image,
+.search-one-offs-context-menu :-moz-any(menuitem, menu) image,
+#SyncedTabsSidebarContext :-moz-any(menuitem, menu) image,
+.textbox-contextmenu :-moz-any(menuitem, menu) image,
+#customizationPanelItemContextMenu :-moz-any(menuitem, menu) image,
+#customizationPaletteItemContextMenu :-moz-any(menuitem, menu) image,
+#customization-toolbar-menu :-moz-any(menuitem, menu) image,
+#main-menubar menupopup :-moz-any(menuitem, menu) image {
+    margin-left: 3px;
+    margin-right: -3px;
+}
+#contentAreaContextMenu > * > * > image {
+    fill: currentColor !important;
+    -moz-context-properties: fill, fill-opacity, stroke !important;
+}
+#toolbar-context-menu menugroup,
+#tabContextMenu menugroup,
+#contentAreaContextMenu menugroup,
+#back-button > menupopup menugroup,
+#forward-button > menupopup menugroup,
+#backForwardMenu menugroup,
+#toolbar-context-menu menugroup,
+#placesContext menugroup,
+#viewButton > menupopup menugroup,
+#pageActionContextMenu menugroup,
+.urlbar-input-box .textbox-contextmenu menugroup,
+#widget-overflow #customizationPanelItemContextMenu menugroup,
+.search-one-offs-context-menu menugroup,
+#SyncedTabsSidebarContext menugroup,
+.textbox-contextmenu menugroup,
+#customizationPanelItemContextMenu menugroup,
+#customizationPaletteItemContextMenu menugroup,
+#customization-toolbar-menu menugroup,
+#main-menubar menupopup menugroup {
+    padding: 0 !important;
+    background-color: transparent !important;
+}
+#toolbar-context-menu .menu-right,
+#tabContextMenu .menu-right,
+#contentAreaContextMenu .menu-right,
+#back-button > menupopup .menu-right,
+#forward-button > menupopup .menu-right,
+#backForwardMenu .menu-right,
+#toolbar-context-menu .menu-right,
+#placesContext .menu-right,
+#viewButton > menupopup .menu-right,
+#pageActionContextMenu .menu-right,
+.urlbar-input-box .textbox-contextmenu .menu-right,
+#widget-overflow #customizationPanelItemContextMenu .menu-right,
+.search-one-offs-context-menu .menu-right,
+#SyncedTabsSidebarContext .menu-right,
+.textbox-contextmenu .menu-right,
+#customizationPanelItemContextMenu .menu-right,
+#customizationPaletteItemContextMenu .menu-right,
+#customization-toolbar-menu .menu-right,
+#main-menubar menupopup .menu-right {
+    -moz-appearance: none !important;
+    padding: 7px !important;
+    margin-right: 6px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(-45deg) scale(.35);
+}
+#toolbar-context-menu :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#tabContextMenu :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#contentAreaContextMenu :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#back-button > menupopup :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#forward-button > menupopup :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#backForwardMenu :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#toolbar-context-menu :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#placesContext :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#viewButton > menupopup :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#pageActionContextMenu :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+.urlbar-input-box
+    .textbox-contextmenu
+    :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#widget-overflow
+    #customizationPanelItemContextMenu
+    :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+.search-one-offs-context-menu
+    :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#SyncedTabsSidebarContext :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+.textbox-contextmenu :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#customizationPanelItemContextMenu
+    :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#customizationPaletteItemContextMenu
+    :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#customization-toolbar-menu :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]),
+#main-menubar menupopup :-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"]):not([disabled="true"]) {
+    -moz-appearance: none !important;
+    background-color: #363a59 !important;
+}
+:-moz-any(menu, menuitem):-moz-any(:hover, [_moz-menuactive="true"])[disabled="true"] {
+    background: none !important;
+    -moz-appearance: none !important;
+}
+.subviewbutton:-moz-any(:hover, [_moz-menuactive="true"])[disabled="true"] {
+    color: var(--panel-disabled-color) !important;
+}
+#backForwardMenu menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
+#backForwardMenu menuitem[checked="true"] > .menu-iconic-left > .menu-iconic-icon,
+#backForwardMenu menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon,
+#back-button menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
+#back-button menuitem[checked="true"] > .menu-iconic-left > .menu-iconic-icon,
+#back-button menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon,
+#forward-button menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
+#forward-button menuitem[checked="true"] > .menu-iconic-left > .menu-iconic-icon,
+#forward-button menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon {
+    display: -moz-box !important;
+}
+#backForwardMenu menuitem[type="radio"] > .menu-iconic-left,
+#back-button menuitem[type="radio"] > .menu-iconic-left,
+#forward-button menuitem[type="radio"] > .menu-iconic-left {
+    -moz-appearance: none !important;
+    padding-right: 7px !important;
+    fill: currentColor !important;
+    -moz-context-properties: fill, fill-opacity !important;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMmM1LjUxNCAwIDEwIDQuNDg2IDEwIDEwcy00LjQ4NiAxMC0xMCAxMC0xMC00LjQ4Ni0xMC0xMCA0LjQ4Ni0xMCAxMC0xMHptMC0yYy02LjYyNyAwLTEyIDUuMzczLTEyIDEyczUuMzczIDEyIDEyIDEyIDEyLTUuMzczIDEyLTEyLTUuMzczLTEyLTEyLTEyem0wIDZjLTMuMzEzIDAtNiAyLjY4Ny02IDZzMi42ODcgNiA2IDZjMy4zMTQgMCA2LTIuNjg3IDYtNnMtMi42ODYtNi02LTZ6IiBmaWxsPSJjb250ZXh0LWZpbGwiIGZpbGwtb3BhY2l0eT0iY29udGV4dC1maWxsLW9wYWNpdHkiLz48L3N2Zz4=")
+        6.5px 1px no-repeat !important;
+    background-size: 15px !important;
+    padding-left: 3px !important;
+}
+#backForwardMenu menuitem[type="radio"],
+#back-button menuitem[type="radio"],
+#forward-button menuitem[type="radio"] {
+    padding: 0px !important;
+    color: white !important;
+}
+/* style all OS-styled javascript modal prompts */
+tabmodalprompt {
+    background-color: rgba(10, 10, 10, 0.5) !important;
+}
+.paymentDialogContainerFrame {
+    background-color: var(--toolbar-bgcolor) !important;
+    color: var(--lwt-text-color, -moz-dialogtext) !important;
+}
+.tabmodalprompt-mainContainer {
+    background-color: var(--toolbar-bgcolor) !important;
+    border: none !important;
+    color: #fff !important;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25), 0px 0px 5px -1px rgba(0, 0, 0, 0.125) !important;
+}
+.tabmodalprompt-mainContainer textbox {
+    border-radius: 3px !important;
+}
+.tabmodalprompt-buttonContainer button {
+    -moz-appearance: none !important;
+    border-radius: 3px !important;
+    background-color: var(--lwt-toolbar-field-background-color) !important;
+    flex: auto !important;
+    color: #fff !important;
+    padding: 2px !important;
+}
+.tabmodalprompt-buttonContainer button:hover {
+    background-color: var(--autocomplete-popup-highlight-background) !important;
+    flex: auto !important;
+    color: #fff !important;
+}
+.tabmodalprompt-buttonContainer .button-text {
+    margin-top: 0.5px !important;
+}
+.tabmodalprompt-buttonContainer spacer {
+    display: none !important;
+}
+.tabmodalprompt-buttonContainer {
+    display: flex !important;
+}
+.tabmodalprompt-checkboxContainer .checkbox-check {
+    -moz-appearance: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    width: 12px !important;
+    -moz-context-properties: fill, fill-opacity, stroke, stroke-opacity !important;
+    fill: currentColor !important;
+    padding: 1px !important;
+    opacity: 0.8 !important;
+    list-style-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNSAyYy0xLjY1NCAwLTMgMS4zNDYtMyAzdjE0YzAgMS42NTQgMS4zNDYgMyAzIDNoMTRjMS42NTQgMCAzLTEuMzQ2IDMtM3YtMTRjMC0xLjY1NC0xLjM0Ni0zLTMtM2gtMTR6bTE5IDN2MTRjMCAyLjc2MS0yLjIzOCA1LTUgNWgtMTRjLTIuNzYyIDAtNS0yLjIzOS01LTV2LTE0YzAtMi43NjEgMi4yMzgtNSA1LTVoMTRjMi43NjIgMCA1IDIuMjM5IDUgNXoiIGZpbGw9ImNvbnRleHQtZmlsbCIgZmlsbC1vcGFjaXR5PSJjb250ZXh0LWZpbGwtb3BhY2l0eSIvPjwvc3ZnPg==") !important;
+}
+.tabmodalprompt-checkboxContainer .checkbox-check[checked="true"] {
+    -moz-appearance: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    width: 12px !important;
+    padding: 1px !important;
+    opacity: 0.8 !important;
+    list-style-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTAuMDQxIDE3bC00LjUtNC4zMTkgMS4zOTUtMS40MzUgMy4wOCAyLjkzNyA3LjAyMS03LjE4MyAxLjQyMiAxLjQwOS04LjQxOCA4LjU5MXptLTUuMDQxLTE1Yy0xLjY1NCAwLTMgMS4zNDYtMyAzdjE0YzAgMS42NTQgMS4zNDYgMyAzIDNoMTRjMS42NTQgMCAzLTEuMzQ2IDMtM3YtMTRjMC0xLjY1NC0xLjM0Ni0zLTMtM2gtMTR6bTE5IDN2MTRjMCAyLjc2MS0yLjIzOCA1LTUgNWgtMTRjLTIuNzYyIDAtNS0yLjIzOS01LTV2LTE0YzAtMi43NjEgMi4yMzgtNSA1LTVoMTRjMi43NjIgMCA1IDIuMjM5IDUgNXoiIGZpbGw9ImNvbnRleHQtZmlsbCIgZmlsbC1vcGFjaXR5PSJjb250ZXh0LWZpbGwtb3BhY2l0eSIvPjwvc3ZnPg==") !important;
+}

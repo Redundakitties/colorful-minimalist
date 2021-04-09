@@ -1,0 +1,114 @@
+/* --------------------- Tab styles --------------------*/
+:root {
+	--red: rgba(179, 0, 0, 0.5);
+	--orange: rgba(211, 84, 0, 0.5);
+	--yellow: rgba(212, 198, 0, 0.5);
+	--green: rgba(0, 156, 0, 0.5);
+	--lightblue: rgba(0, 154, 201, 0.5);
+	--blue: rgba(51, 51, 255, 0.5);
+	--purple: rgba(118, 3, 146, 0.5);
+	--black: rgba(80, 80, 80, 0.5);
+	--white: rgba(217, 237, 245, 0.5);
+}
+/* -------------- Tree: tabs font */
+.Tab .title {
+	font-family: Fira Sans;
+}
+/* -------------- Tree: tabs coloring*/
+.Tab[title*="https://github.com"], .PinnedTab[title*="https://github.com"] {
+	--tabs-bg-hover: var(--white); /* default hover background */
+	--tabs-bg-active: var(--white); /* default mouse-pressed background */
+	--tabs-activated-bg: var(--white); /* default current background */
+}
+.Tab[title*="https://www.quora.com"], .PinnedTab[title*="https://www.quora.com"], 
+.Tab[title*="https://www.youtube.com"], .PinnedTab[title*="https://www.youtube.com"] {
+	--tabs-bg-hover: var(--red); 
+	--tabs-bg-active: var(--red); 
+	--tabs-activated-bg: var(--red); 
+}
+.Tab[title*="https://open.spotify.com"], .PinnedTab[title*="https://open.spotify.com"],
+.Tab[title*="https://docs.google.com/spreadsheets"], .PinnedTab[title*="https://docs.google.com/spreadsheets"] {
+	--tabs-bg-hover: var(--green); 
+	--tabs-bg-active: var(--green); 
+	--tabs-activated-bg: var(--green); 
+}
+.Tab[title*="https://learn.rochester.edu"], .PinnedTab[title*="https://learn.rochester.edu"] {
+	--tabs-bg-hover: var(--black); 
+	--tabs-bg-active: var(--black); 
+	--tabs-activated-bg: var(--black); 
+}
+.Tab[title*="https://keep.google.com"], .PinnedTab[title*="https://keep.google.com"] {
+	--tabs-bg-hover: var(--yellow); 
+	--tabs-bg-active: var(--yellow); 
+	--tabs-activated-bg: var(--yellow); 
+}
+.Tab[title*="https://www.reddit.com"], .PinnedTab[title*="https://www.reddit.com"] {
+	--tabs-bg-hover: rgba(255, 72, 0, 0.5); 
+	--tabs-bg-active: rgba(255, 72, 0, 0.5); 
+	--tabs-activated-bg: rgba(255, 72, 0, 0.5); 
+}
+.Tab[title*="https://stackoverflow.com"], .PinnedTab[title*="https://stackoverflow.com"] {
+	--tabs-bg-hover: var(--orange); 
+	--tabs-bg-active: var(--orange); 
+	--tabs-activated-bg: var(--orange); 
+}
+.Tab[title*="https://www.linkedin.com"], .PinnedTab[title*="https://www.linkedin.com"],
+.Tab[title*="https://twitter.com"], .PinnedTab[title*="https://twitter.com"] {
+	--tabs-bg-hover: var(--lightblue); 
+	--tabs-bg-active: var(--lightblue); 
+	--tabs-activated-bg: var(--lightblue); 
+}
+.Tab[title*="https://www.twitch.tv/"], .PinnedTab[title*="https://www.twitch.tv/"] {
+	--tabs-bg-hover: var(--purple); 
+	--tabs-bg-active: var(--purple); 
+	--tabs-activated-bg: var(--purple); 
+}
+
+/* -------------- Tree: move group counts to left of favicon */
+.Tab:not(:hover) .fav > .child-count {
+	opacity: 0;
+}
+.Tab .fav > .child-count {
+	left: -3px;
+	right: unset;
+}
+/* -------------- Tree: hide close icon */
+.Tab:hover .close > svg {
+	opacity: 0;
+	/* background-image: radial-gradient(circle at center, var(--lwt-toolbarbutton-icon-fill,currentColor) 0,var(--lwt-toolbarbutton-icon-fill,currentColor) 10%,transparent 15% ); */
+}
+/* -------------- Tree: hide expand icon */
+.Tab:not(:hover) .exp > svg {
+	opacity: 0;
+}
+/* ---------------- Set group parent favicons to full opacity when not hovered */
+.Tab:not(:hover) .lvl-wrapper > .fav > img {
+	opacity: 1;
+}
+/* -------------- Tree: discarded tabs */
+.Tab[data-discarded] .title {
+	text-decoration: line-through;
+}
+/* -------------- Tree: unread tabs */
+.Tab[data-unread] .title {
+	font-style: italic;
+}
+/* -------------- Tabs: default browser style for updated pins */
+.PinnedTab:-moz-any([data-updated], [data-pending]) .fav > :first-child,
+.Tab:-moz-any([data-updated], [data-pending]) .fav > :first-child {
+	mask: unset !important;
+}
+.PinnedTab .update-badge,
+.Tab .update-badge {
+	width: 12px;
+	height: 12px;
+	top: calc(0% - 13px);
+	left: calc(50% - 6px);
+	mask: radial-gradient(circle, #000 1px, #0000 2px), radial-gradient(circle, #000, #0000 5px);
+}
+.Tab .update-badge {
+	opacity: 0;
+	top: calc(0% - 7px);
+	left: calc(0% - 7px);
+	z-index: -1;
+}

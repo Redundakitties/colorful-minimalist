@@ -1,0 +1,84 @@
+/* --------------------------------------------------- URL Highlight ----------------------------------------*/
+::-moz-selection {
+    background-color: rgba(7, 83, 184, 0.63) !important;
+}
+
+#urlbar {
+    z-index: 1 !important;
+}
+#urlbar-background {
+    z-index: -2 !important;
+    font-family: Fira Sans !important;
+}
+#identity-box {
+    --focus-offset: 16px;
+}
+:root:not([uidensity="compact"]) #identity-box {
+    --focus-offset: 15px;
+}
+#identity-box::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: calc(100% + var(--focus-offset));
+    top: 0;
+    left: 0;
+    background: repeating-linear-gradient(135deg, #0000 0px 10px, var(--security-color, #0000) 10px 20px);
+    opacity: .4;
+    transition: background 250ms linear;
+    z-index: -1;
+    pointer-events: none;
+    touch-action: none;
+}
+#urlbar[focused] #identity-box::after {
+    left: calc(var(--focus-offset) * -1);
+}
+
+/* TEAL: moz-extension */
+#urlbar[pageproxystate='valid'] #identity-box.extensionPage::after {
+    --security-color: teal;
+}
+/* GREEN: https://www.github.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after {
+    --security-color: rgba(27, 104, 175, 0.5);
+}
+/* GREEN: https://www.google.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.verifiedDomain:after {
+    --security-color: rgba(27, 104, 175, 0.5);
+}
+/* YELLOW: https://mixed-script.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.mixedActiveBlocked:after {
+    --security-color: rgba(218, 165, 32, 0.5);
+}
+/* YELLOW: https://mixed.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after {
+    --security-color: rgba(218, 165, 32, 0.5);
+}
+/* YELLOW: https://very.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after {
+    --security-color: rgba(218, 165, 32, 0.5);
+}
+/* YELLOW: https://self-signed.badssl.com/ - warning page */
+#urlbar[pageproxystate='valid'] #identity-box.certErrorPage:after {
+    --security-color: rgba(218, 165, 32, 0.5);
+}
+/* YELLOW: https://self-signed.badssl.com/ - post-override page */
+#urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after {
+    --security-color: rgba(218, 165, 32, 0.5);
+}
+/* YELLOW: Don't know an example for this */
+#urlbar[pageproxystate='valid'] #identity-box.weakCipher:after {
+    --security-color: rgba(218, 165, 32, 0.5);
+}
+/* YELLOW: https://mixed-script.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after {
+    --security-color: rgba(218, 165, 32, 0.5);
+}
+/* RED: http://http-login.badssl.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after {
+    --security-color: rgba(178, 34, 34, 0.5);
+}
+/* RED: http://www.httpvshttps.com/ */
+#urlbar[pageproxystate='valid'] #identity-box.notSecure::after {
+    --security-color: rgba(178, 34, 34, 0.5);
+}

@@ -1,0 +1,61 @@
+/* Import from firefox css-hacks*/
+@import url(hacks/button_effect_scale_onclick.css);
+@import url(hacks/hide_toolbox_top_bottom_borders.css);
+@import url(hacks/minimal_text_fields.css);
+@import url(hacks/minimal_toolbarbuttons.css);
+
+/*Import minimalist colorful hacks */
+@import url(hacks/urlHighlight.css);
+@import url(hacks/sideberryMods.css);
+@import url(hacks/menuShow.css);
+@import url(hacks/darkContextMenu.css);
+
+/* Apply your custom modifications after imports */
+#TabsToolbar, #sidebar-header, #sidebar-splitter {
+  display: none;
+}
+
+/* Bookmark Panel Tweaks */
+ #sidebar-box,
+ #sidebar,
+ .sidebar-placesTree {
+     font-family: Fira Sans !important;
+     color: #70a0ff !important;
+     background-color: rgba(29,0,64) !important;
+ }
+
+#search-box {
+  color: white;
+}
+
+/* Remove Folders from Bookmark Sidebar*/
+.sidebar-placesTreechildren::-moz-tree-image(title, container){ 
+list-style-image: none !important;
+display: none !important;
+padding-right: 0px !important;
+margin: 0px 0px !important;
+width: 0px !important; 
+}
+
+/* Fira Sans In Most Places */
+#searchFilter,
+  menulist,
+  input,  
+  textbox,
+  richlistbox,
+  treecol,
+  button,
+  menu,
+#permList{
+    font-family: Fira Sans !important;
+}
+
+#PersonalToolbar,
+#personal-bookmarks,
+#PlacesToolbar,
+#toolbarbutton {
+  font-family: Fira Sans !important;
+}
+
+
+

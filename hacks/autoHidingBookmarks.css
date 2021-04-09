@@ -1,0 +1,42 @@
+/*------------------------------ AutoHiding Bookmarks ------------------------------------*/
+#PersonalToolbar{
+    --uc-bm-height: -5px; /* Might need to adjust if the toolbar has other buttons */
+    --uc-bm-padding: 10px; /* Vertical padding to be applied to bookmarks */
+    --uc-autohide-toolbar-delay: 300ms; /* The toolbar is hidden after 0.3s */
+    
+    /* 0deg = "show" ; 90deg = "hide" ;  Set the following to control when bookmarks are shown */
+    --uc-autohide-toolbar-focus-rotation: 0deg; /* urlbar is focused */
+    --uc-autohide-toolbar-hover-rotation: 0deg; /* cursor is over the toolbar area */
+  }
+  
+  :root[uidensity="compact"] #PersonalToolbar{ --uc-bm-padding: 1px }
+  :root[uidensity="touch"] #PersonalToolbar{ --uc-bm-padding: 7px }
+  
+  #PersonalToolbar:not([customizing]){
+    position: relative;
+    margin-bottom: calc(0px - var(--uc-bm-height) - 2 * var(--uc-bm-padding));
+    transform: rotateX(90deg);
+    transform-origin: top;
+    transition: transform 35ms linear var(--uc-autohide-toolbar-delay) !important;
+    z-index: 1;
+  }
+  
+  #PlacesToolbarItems > .bookmark-item,
+  #OtherBookmarks,
+  #PersonalToolbar > #import-button{
+    padding-block: var(--uc-bm-padding) !important;
+  }
+  
+  #nav-bar:focus-within + #PersonalToolbar{
+    transition-delay: 100ms !important;
+    transform: rotateX(var(--uc-autohide-toolbar-focus-rotation,0));
+  }
+  
+  #navigator-toolbox:hover > #PersonalToolbar{
+    transition-delay: 100ms !important;
+    transform: rotateX(var(--uc-autohide-toolbar-hover-rotation,0));
+  }
+  
+  #navigator-toolbox:hover > #nav-bar:focus-within + #PersonalToolbar {  
+    transform: rotateX(0);
+  }

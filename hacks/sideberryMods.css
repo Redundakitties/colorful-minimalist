@@ -1,0 +1,90 @@
+:root {
+    --autohide-sidebar-width: 30px;
+    --autohide-sidebar-toolbar-height: var(--uc-toolbar-height, 32px); /* variable from hide_titlebar.css */
+}
+:root[sizemode="normal"] {
+    --autohide-sidebar-toolbar-height: var(--uc-toolbar-height, 38px); /* variable from hide_titlebar.css */
+}
+
+/* -------------------------- Sidebery Auto-hiding Sidebar ------------------------ */
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: var(--autohide-sidebar-width);
+    position: fixed;
+    right: 0;
+    z-index: 1;
+    transition: all 0.2s ease;
+    border-left: 1px solid #0a0646ff; /* Adjust to fit your theme */
+}
+
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover,
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
+    #sidebar-header,
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
+    #sidebar {
+    width: 195px !important;
+}
+
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
+    #sidebar-splitter {
+    display: none;
+}
+
+/*
+* Adjust to your settings!
+* You need to subtract the height of the panels above sidebar: nav bar,
+* bookmarks bar, etc. -- whichever is enabled/displayed.
+*
+* You can see which mode (normal, compact or touch) you’re in by going to:
+* Firefox Menu ? Customize… (at the bottom of the screen) ? Density
+*
+*                | normal | compact | touch
+* Menu bar       |  27px  |   27px  |  27px
+* Tab bar        |  33px  |   29px  |  41px
+* Nav bar        |  40px  |   32px  |  40px
+* Bookmarks bar  |  23px  |   21px  |  27px
+*
+* Example:
+* - tab bar is hidden with CSS above (0px)
+* - menu and bookmarks bar are hidden by default (0px)
+* - that only leaves nav bar = 40px in normal mode (default)
+*/
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+height: calc(100vh - var(--autohide-sidebar-toolbar-height));
+}
+
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
+#sidebar {
+flex-grow: 1;
+}
+
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden])
+~ #appcontent {
+margin-right: var(--autohide-sidebar-width);
+}
+
+#main-window:not([extradragspace="true"])[inFullscreen][inDOMFullscreen] #appcontent {
+margin-right: 0 !important;
+}
+
+#main-window:not([extradragspace="true"])[inFullscreen]
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+height: 100vh;
+}
+
+/* Hide sidebar header */
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
+#sidebar-header {
+display: none;
+}

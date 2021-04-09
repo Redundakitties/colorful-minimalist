@@ -1,0 +1,31 @@
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/button_effect_scale_onclick.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Effect */
+
+:root:not([uidensity="compact"]) #back-button{ --uc-back-extra-padding: 2px }
+
+.toolbarbutton-icon,
+.menuitem-iconic .menu-iconic-icon{
+  transition: transform 83ms linear !important;
+}
+
+toolbar .toolbarbutton-1 > .toolbarbutton-icon
+.urlbar-icon{
+  transition: padding 83ms linear !important;
+}
+
+toolbarbutton#scrollbutton-up:active > .toolbarbutton-icon,
+toolbarbutton:not(.toolbarbutton-1):active > .toolbarbutton-icon,
+toolbar .toolbarbutton-1:not([disabled]):active > .toolbarbutton-badge-stack > .toolbarbutton-icon,
+.menuitem-iconic:active .menu-iconic-icon{
+  transform: scale(0.6) !important;
+}
+toolbarbutton#scrollbutton-down:active > .toolbarbutton-icon{ transform: scale(-0.6) !important; }
+
+
+toolbar .toolbarbutton-1:not([disabled]):active > .toolbarbutton-icon{
+  padding: calc(var(--toolbarbutton-inner-padding) + var(--uc-back-extra-padding,0px) + 3px) !important;
+}
+
+#page-action-buttons .urlbar-icon:active{ padding: calc(var(--urlbar-icon-padding) + 3px) !important; }

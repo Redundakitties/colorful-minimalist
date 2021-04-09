@@ -1,0 +1,41 @@
+/*------------------------------ Vertical popop menubar ---------------------------	*/
+    #toolbar-menubar{
+	    --uc-menubaritem-height: 28px;
+	    --uc-menubaritem-width: 40px;
+    }
+
+    menubar > menu{visibility: collapse; transition: visibility 0ms linear 0.1s}
+	menubar:hover > menu,    
+	#toolbar-menubar[autohide="true"]:not([inactive]) > #menubar-items > menubar > menu{visibility: visible}
+
+	#menubar-items{
+	display: block;
+	position: fixed;
+	z-index: 10;
+	background-color: #1d0040;
+	inset-inline-start: 0;
+	}
+	menubar{ -moz-box-orient: horizontal; }
+	menubar > menu { padding: 3px }
+
+	menubar > menu > menupopup{ margin: calc(0px - var(--uc-menubaritem-height)) 0 0 var(--uc-menubaritem-width) }
+	#toolbar-menubar[autohide="true"][inactive] > #menubar-items{ max-height: 0px; overflow: -moz-hidden-unscrollable }
+
+
+	#toolbar-menubar[autohide="true"]:not([inactive]){ margin-bottom: -32px }
+
+	#toolbar-menubar > .titlebar-buttonbox-container + :is(toolbarbutton,toolbaritem){ margin-inline-start: var(--uc-menubaritem-width) }
+
+	#file-menu{
+	fill: currentColor;
+	visibility: visible;
+	height: var(--uc-menubaritem-height);
+	width: var(--uc-menubaritem-width);
+	-moz-context-properties: fill;
+	padding: 3px !important;
+	background-repeat: no-repeat;
+	background-position: center;
+	}
+
+	#file-menu > .menubar-text{ visibility: collapse }
+	menubar:hover > #file-menu > .menubar-text{ visibility: visible }

@@ -1,0 +1,60 @@
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/minimal_text_fields.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+:root:not([customizing]){
+  --lwt-toolbar-field-background-color: transparent !important;
+  --lwt-toolbar-field-border-color: transparent !important;
+}
+
+#urlbar[open]{ background-color: var(--toolbar-bgcolor) !important; }
+
+#urlbar,
+#searchbar,
+#search-box{
+  -moz-appearance: none !important;
+  background-color: var(--lwt-toolbar-field-background-color) !important;
+  color: inherit !important;
+}
+
+#searchbar,
+#urlbar,
+.searchbar-textbox{
+  box-shadow: none !important;
+}
+
+#tracking-protection-icon-container,
+#identity-box ~ *,
+.searchbar-textbox > *{
+  opacity: 0;
+  transition: opacity 150ms linear
+}
+
+#urlbar .urlbar-input-box,
+.searchbar-textbox > moz-input-box{ opacity: 0.6 }
+
+#identity-box ~ *:hover,
+#tracking-protection-icon-container:hover, 
+#tracking-protection-icon-container ~ *:hover,
+#urlbar:focus-within > *,
+#urlbar-input-container:focus-within > *,
+.searchbar-textbox:hover > *,
+.searchbar-textbox:focus-within > *{ opacity: 1 }
+
+#identity-box{ border: none !important }
+
+#urlbar:not(:hover) #identity-box{ background-image: radial-gradient(closest-side circle at 16px, orange 10%,transparent 35% ); }
+#urlbar:not(:hover) #identity-box.verifiedIdentity{ background-image: radial-gradient(closest-side circle at 16px, lime 10%,transparent 35% ); }
+#urlbar:not(:hover) #identity-box > *{ opacity: 0 }
+/*
+:root[title="Firefox Nightly"] #identity-box,
+:root[title="Mozilla Firefox"] #identity-box,
+*/
+#urlbar[pageproxystate=invalid]:not([usertyping]) #identity-box,
+#identity-box:hover,
+#identity-box.chromeUI,
+#identity-box.verifiedDomain{
+  background-image: none !important;
+}
+
+#identity-box > #identity-icon-labels{ transition: max-width 150ms linear !important; }
+#identity-box:not(:hover) > #identity-icon-labels{ max-width: 0px !important; }
