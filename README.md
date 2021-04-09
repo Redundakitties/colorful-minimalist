@@ -12,8 +12,8 @@ Setup
 Once you have your userChrome.css file set up following [these](https://www.reddit.com/r/FirefoxCSS/comments/73dvty/tutorial_how_to_create_and_livedebug_userchromecss/) instructions, (and you have sideberry installed) follow these steps: 
 
 1) Paste the code from sideberyTweaks.txt into the native custom css editor. 
-  * Configure panel -> Styles editor -> Sidebar 
-  * If you did this correctly you can now edit the colors of your tabs depending on if you're hovering over them.
+	* Configure panel -> Styles editor -> Sidebar 
+	* If you did this correctly you can now edit the colors of your tabs depending on if you're hovering over them.
 
 Changing the links will allow you to customize what tabs you want colored.
 
