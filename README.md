@@ -24,6 +24,7 @@ Changing the links will allow you to customize what tabs you want colored.
 ```
 
 2) Copy the userChrome.css from here into your userChrome.css you set up, and paste the hacks folder into your chrome folder.
+3) If you're interested in the "Open in New Private Tab" option, check out this [github](https://github.com/xiaoxiaoflood/firefox-scripts) for instructions.
 
 Contact
 ====
