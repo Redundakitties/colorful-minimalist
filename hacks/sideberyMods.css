@@ -1,7 +1,7 @@
 :root {
-    --autohide-sidebar-extended: 230px; /* width of each tab extended */
-    --autohide-sidebar-collapsed: 32px;
-    --autohide-sidebar-right-amount: 180px;
+    --autohide-sidebar-extended: 230px; /* width of bar extended */
+    --autohide-sidebar-collapsed: 32px; /* width of bar collapsed */
+    --autohide-sidebar-right-amount: 180px; /* fix for grey box, experiment as needed */
 }
 
 /* -------------------------- Sidebery Auto-hiding Sidebar ------------------------ */
