@@ -13,7 +13,7 @@ Colorful Sidebery tabs created by me and minimalist buttons taken from [here](ht
 
 Once you have your userChrome.css file set up following [these](https://www.reddit.com/r/FirefoxCSS/comments/73dvty/tutorial_how_to_create_and_livedebug_userchromecss/) instructions, (and you have sideberry installed) follow these steps: 
 
-1) Paste the code from sideberyTweaks.txt into the native custom css editor. 
+1) Paste the code from sideberyTweaks.txt into the native custom css editor. (or use sideberyTweaksv5 if you've updated to the newer version of sidebery)
 	* Configure panel → Styles editor → Sidebar 
 	* If you did this correctly you can now edit the colors of your tabs depending on if you're hovering over them.
 
@@ -38,6 +38,7 @@ Changing the links will allow you to customize what tabs you want colored.
 - removed weird purple top left square from menuShow.css
 - updated sidebery to beta v5 (highly recommend)
 	- due to updating sidebery, had to change a bunch of sideberyTweaks.txt
+	- made a new file for this called sideberyTweaksv5.txt
 
 ## Contact
 
