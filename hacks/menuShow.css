@@ -12,7 +12,7 @@
 	display: block;
 	position: fixed;
 	z-index: 10;
-	background-color: #1d0040;
+	background-color: transparent;
 	inset-inline-start: 0;
 	}
 	menubar{ -moz-box-orient: horizontal; }
