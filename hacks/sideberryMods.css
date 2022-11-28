@@ -13,7 +13,6 @@
     right: calc(var(--autohide-sidebar-right-amount) * -1);
     z-index: 1;
     transition: all 0.2s ease-in-out;
-    box-shadow: 0px 0px 8px -4px hsla(240, 4%, 0%, 0.6), 0px 0px 15px 0px hsla(0, 0%, 0%, 0.2) !important;
 }
 
 /* width of panel itself (different from width of each tab) */
@@ -42,12 +41,12 @@
 
 #main-window:not([extradragspace="true"])[inFullscreen]
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-    height: 100vh;
+    height: 100vh; /* adjust these if your sidebery is not tall enough */
 }
 
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"])
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-    height: 100vh;
+    height: 100vh; /* adjust these if your sidebery is not tall enough */
 }
 
 /* Hide sidebar header */
