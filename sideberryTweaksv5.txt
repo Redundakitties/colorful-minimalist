@@ -1,0 +1,140 @@
+#root.root {--tabs-indent: 15px;}
+#root.root {--tabs-height: 32px;}
+#root.root {--ctx-menu-fg: whitesmoke;}
+#root.root {--tabs-activated-shadow: 0 1px 4px -1px rgba(0,0,0,0.282), inset 0 0 0 1px rgba(255,255,255,0.031);}
+#root.root {--tabs-lvl-opacity: 0.16;}
+#root.root {--ctx-menu-shadow: 0 0 0 1px rgba(255,255,255,0.086), 0 1px 16px 0 rgba(0,0,0,0.282);}
+#root.root {--ctx-menu-separator: black;}
+#root.root {--ctx-menu-font: 1rem JetBrains Mono;}
+#root.root {--ctx-menu-border-radius: 5px;}
+#root.root {--status-notice: #00e9fb;}
+#root.root {--tabs-font: 1rem JetBrains Mono;}
+
+/* ----------- Tab title styles ----------- */
+.Tab .title {
+		transition: all 5s ease;
+		display: inline-block;
+} /* enable scrolling */
+.Tab:hover .title {margin-left: -10rem;}
+
+.Tab[data-discarded="true"] .title { 
+    text-decoration: line-through; 
+    opacity: 75%;
+}
+.Tab[data-unread="true"] .title {font-style: italic;}
+.Tab .fav > .child-count {display: none;} /* hide group counts */
+
+.Tab .fav > .fav-icon { /* gives favicon dropshadow */
+    width: var(32px);
+    height: var(32px);
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.4)) !important;
+}
+.Tab .audio {
+    top: 3px !important;
+    left: 10px !important;
+    filter: drop-shadow(0px 0px 1px black);
+}
+.Tab[data-pin="true"] .audio {
+    top: 12px !important;
+    left: 15px !important;
+    filter: drop-shadow(0px 0px 1px black);
+}
+
+/* ----------- Tab colors ----------- */
+:root {
+	--red: rgba(130,0,0,0.5);
+	--orange: rgba(230, 94, 4, 0.508);
+	--yellow: rgba(255, 215, 16, 0.378);
+	--green: rgba(0, 130, 0, 0.5);
+	--lightblue: rgba(0, 195, 255, 0.5);
+	--blue: rgba(51, 51, 255, 0.5);
+	--purple: rgba(204, 0, 255, 0.26);
+	--black: rgba(80, 80, 80, 0.6);
+	--white: rgba(217, 237, 245, 0.5);
+}
+
+.Tab[title*="https://github.com"], 
+.PinnedTab[title*="https://github.com"] {
+	--hover-bg: var(--white); /* default hover background */
+	--clicked-bg: var(--white); /* default mouse-pressed background */
+	--tabs-activated-bg: var(--white); /* default current background */
+}
+
+.Tab[title*="https://www.quora.com"], 
+.PinnedTab[title*="https://www.quora.com"],
+.Tab[title*="https://archiveofourown.org"], 
+.PinnedTab[title*="https://archiveofourown.org"],
+.Tab[title*="https://www.reddit.com"], 
+.PinnedTab[title*="https://www.reddit.com"], 
+.Tab[title*="https://www.youtube.com"], 
+.PinnedTab[title*="https://www.youtube.com"] {
+    --hover-bg: var(--red);
+    --clicked-bg: var(--red);
+	--tabs-activated-bg: var(--red); 
+}
+
+.Tab[title*="https://stackoverflow.com"], 
+.PinnedTab[title*="https://stackoverflow.com"] {
+	--hover-bg: var(--orange);
+    --clicked-bg: var(--orange);
+	--tabs-activated-bg: var(--orange); 
+}
+
+.Tab[title*="https://drive.google.com"], 
+.PinnedTab[title*="https://drive.google.com"] {
+	--hover-bg: var(--yellow);
+    --clicked-bg: var(--yellow);
+	--tabs-activated-bg: var(--yellow); 
+}
+
+.Tab[title*="https://app.element.io"], 
+.PinnedTab[title*="https://www.app.element.io"],
+.Tab[title*="https://docs.google.com/spreadsheets"], 
+.PinnedTab[title*="https://docs.google.com/spreadsheets"] {
+    --hover-bg: var(--green);
+    --clicked-bg: var(--green);
+    --tabs-activated-bg: var(--green); 
+}
+
+.Tab[title*="https://www.linkedin.com"], 
+.PinnedTab[title*="https://www.linkedin.com"],
+.Tab[title*="https://docs.google.com/document"],
+.PinnedTab[title*="https://docs.google.com/document"] {
+	--hover-bg: var(--lightblue); 
+	--clicked-bg: var(--lightblue); 
+	--tabs-activated-bg: var(--lightblue); 
+}
+
+.Tab[title*="https://messages.google.com"], 
+.PinnedTab[title*="https://messages.google.com"],
+ .Tab[title*="https://discord.com"], 
+.PinnedTab[title*="https://discord.com"],
+.Tab[title*="https://www.fanfiction.net"], 
+.PinnedTab[title*="https://www.fanfiction.net"],
+.Tab[title*="https://mail.google.com"], 
+.PinnedTab[title*="https://mail.google.com"] {
+	--hover-bg: var(--blue); 
+	--clicked-bg: var(--blue); 
+	--tabs-activated-bg: var(--blue); 
+}
+
+.Tab[title*="https://learn.rochester.edu"], 
+.PinnedTab[title*="https://learn.rochester.edu"], 
+.Tab[title*="https://www.cs.rochester.edu"], 
+.PinnedTab[title*="https://www.cs.rochester.edu"]{
+	--hover-bg: var(--black); 
+	--clicked-bg: var(--black); 
+	--tabs-activated-bg: var(--black); 
+}
+
+/* ----------- Pinned Tab Bar Shadow ----------- */
+.PinnedTabsBar {
+	box-shadow: inset -2px 0px 30px rgba(0, 0, 0, 0.23);
+}
+
+#root[data-pinned-tabs-position="panel"] .PinnedDock {
+	justify-content: flex-end;
+}
+#root[data-pinned-tabs-position="panel"]:not(:hover) .PinnedDock {
+	flex-direction: row-reverse;
+}
