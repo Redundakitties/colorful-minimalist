@@ -11,7 +11,7 @@ Colorful Sidebery tabs created by me and minimalist buttons taken from [here](ht
 
 # Setup
 
-Once you have your userChrome.css file set up following [these](https://www.reddit.com/r/FirefoxCSS/comments/73dvty/tutorial_how_to_create_and_livedebug_userchromecss/) instructions, (and you have sideberry installed) follow these steps: 
+Once you have your userChrome.css file set up following [these](https://www.reddit.com/r/FirefoxCSS/comments/73dvty/tutorial_how_to_create_and_livedebug_userchromecss/) instructions, (and you have sidebery installed) follow these steps: 
 
 1) Paste the code from sideberyTweaks.txt into the native custom css editor. (or use sideberyTweaksv5 if you've updated to the newer version of sidebery)
 	* Configure panel → Styles editor → Sidebar 
