@@ -49,6 +49,7 @@ Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css]
 - updated sidebery to beta v5 (highly recommend)
 	- due to updating sidebery, had to change a bunch of sideberyTweaks.txt
 	- made a new file for this called sideberyTweaksv5.txt
+- removed [custom_menupopup_check_icons.css](https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/custom_menupopup_check_icons.css)
 
 ## Contact
 
