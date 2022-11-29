@@ -3,11 +3,11 @@
 @import url(hacks/hide_toolbox_top_bottom_borders.css);
 @import url(hacks/minimal_text_fields.css);
 @import url(hacks/minimal_toolbarbuttons.css);
-@import url(hacks/custom_menupopup_check_icons.css);
+/* @import url(hacks/custom_menupopup_check_icons.css);  */
 
 /*Import hacks */
 @import url(hacks/urlHighlight.css);
-@import url(hacks/sideberryMods.css); 
+@import url(hacks/sideberyMods.css); 
 @import url(hacks/menuShow.css); 
 @import url(hacks/darkContextMenu.css);
 
@@ -15,7 +15,11 @@
 --tabs-border-color: transparent !important; 
 }
 
-/* Apply your custom modifications after imports */
+#urlbar, #searchbar .searchbar-textbox {
+  font-family: JetBrains Mono !important; font-size: 12pt 
+}
+
 #TabsToolbar, #sidebar-header, #sidebar-splitter {
   display: none;
 }
+/* note: if your minimize, exit, etc menu is gone, press alt, right click the menu bar and check mark it */
