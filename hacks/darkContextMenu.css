@@ -4,13 +4,14 @@ menupopup {
   --panel-border-color: rbg(0,0,0) !important;
 }
 /* color fg of context menu */
-menupopup > menuitem[_moz-menuactive="true"]:not([disabled]),
-menupopup > menu[_moz-menuactive="true"]:not([disabled]),
-#context-navigation > menuitem[_moz-menuactive="true"]:not([disabled]) > .menu-iconic-left > .menu-iconic-icon{
-  background: var(--lwt-accent-color) !important;
+menupopup > menuitem[_moz-menuactive="true"],
+menupopup > menu[_moz-menuactive="true"],
+#context-navigation > menuitem[_moz-menuactive="true"] > .menu-iconic-left > .menu-iconic-icon{
   color: whitesmoke !important;
+  background: var(--lwt-accent-color) !important;
   filter: brightness(1.2);
 }
+
 /* style text */
 menupopup > menuitem, menupopup > menu, 
 menupopup > menucaption, menupopup > menuseparator {
