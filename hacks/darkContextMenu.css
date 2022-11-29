@@ -1,7 +1,6 @@
 /* color bg of context menu */
 menupopup {
   --panel-background: linear-gradient(var(--lwt-accent-color), black) !important;
-  --panel-color: whitesmoke !important;
   --panel-border-color: rbg(0,0,0) !important;
 }
 /* color fg of context menu */
