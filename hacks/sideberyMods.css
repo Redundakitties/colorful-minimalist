@@ -1,57 +1,38 @@
 :root {
-    --autohide-sidebar-extended: 230px; /* width of bar extended */
-    --autohide-sidebar-collapsed: 32px; /* width of bar collapsed */
-    --autohide-sidebar-right-amount: 180px; /* fix for grey box, experiment as needed */
+    --autohide-sidebar-extended: 230px; /* width of each tab extended */
+    --autohide-sidebar-collapsed: 34px; /* width of each tab collapsed */
+    --sidebar-height: 100vh; /* height of sidebery */
 }
 
 /* -------------------------- Sidebery Auto-hiding Sidebar ------------------------ */
+/* width of panel (grey box) (different from width of each tab) */
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"])
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) {
-    flex-direction: column;
-    overflow: hidden;
     position: fixed;
-    right: calc(var(--autohide-sidebar-right-amount) * -1);
+    right: 0px;
+    width: var(--autohide-sidebar-collapsed) !important;
+    min-width: unset !important;
     z-index: 1;
     transition: all 0.2s ease-in-out;
 }
 
-/* width of panel itself (different from width of each tab) */
+/* width of panel (grey box):hover */
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"])
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
-    width: calc(var(--autohide-sidebar-right-amount) + var(--autohide-sidebar-extended)) !important;
-}
-#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
-    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
-    #sidebar {
-    width: var(--autohide-sidebar-extended) !important; /* width of each tab */
-}
-
-#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
-#sidebar {
-    flex-grow: 1;
+    width: var(--autohide-sidebar-extended) !important;
 }
 
 /* normal website page right margin */
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"])
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden])
 ~ #appcontent {
-    margin-right: var(--autohide-sidebar-collapsed) !important;
+    margin-right: var(--autohide-sidebar-collapsed);
 }
 
+/* adjust if your sidebery is not tall enough */
 #main-window:not([extradragspace="true"])[inFullscreen]
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-    height: 100vh; /* adjust these if your sidebery is not tall enough */
-}
-
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"],
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"])
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-    height: 100vh; /* adjust these if your sidebery is not tall enough */
-}
-
-/* Hide sidebar header */
-#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
-#sidebar-header {
-    display: none;
+    height: var(--sidebar-height); 
 }
