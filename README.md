@@ -1,13 +1,17 @@
 # some-sidebery-tweaks
 **Tested on Firefox 107.0 (64-bit, Windows 11)**
 
-Originally Created: 03/13/2021 Edited: 11/28/2022 
+Originally Created: 03/13/2021 Edited: 11/30/2022 
 
 `menuShow`, `sideberyMods`, `darkContextMenu`, and `sideberyTweaks`
 were either created by me or heavily modified by me
 everything else is stolen from [MrOtherGuy](https://github.com/MrOtherGuy/firefox-csshacks)
 
-[Preview](https://imgur.com/a/s1wzdQZ)
+
+
+https://user-images.githubusercontent.com/38409600/204728178-7745f2c9-e6e2-4917-8de6-648609f0746d.mp4
+
+
 
 [Reddit Post](https://www.reddit.com/r/FirefoxCSS/comments/z8k0a5/a_few_sidebery_and_firefox_tweaks_v20_2_years/)
 
