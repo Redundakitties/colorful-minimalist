@@ -59,4 +59,4 @@ Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css]
 
 ## Contact
 
-If you have any questions don't hesitate to ping me my discord is GracefulLion#9559
+If you have any questions don't hesitate to open an issue, I'll try to get to it as soon as I can.
