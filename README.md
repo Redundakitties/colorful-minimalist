@@ -9,7 +9,7 @@ everything else is stolen from [MrOtherGuy](https://github.com/MrOtherGuy/firefo
 
 [Preview](https://imgur.com/a/s1wzdQZ)
 
-[Reddit Post](https://www.reddit.com/r/FirefoxCSS/comments/m4cqse/a_few_sidebery_and_firefox_tweaks/)
+[Reddit Post](https://www.reddit.com/r/FirefoxCSS/comments/z8k0a5/a_few_sidebery_and_firefox_tweaks_v20_2_years/)
 
 # Setup
 
