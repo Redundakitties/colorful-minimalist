@@ -40,9 +40,9 @@ Changing the links will allow you to customize what tabs you want colored.
 Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css](https://github.com/Redundakitties/colorful-minimalist/blob/main/hacks/sideberyMods.css). The specific variables you should tinker with are these: 
 ```
 :root {
-    --autohide-sidebar-extended: 230px; /* width of bar extended */
-    --autohide-sidebar-collapsed: 32px; /* width of bar collapsed */
-    --autohide-sidebar-right-amount: 180px; /* fix for grey box, experiment as needed */
+    --autohide-sidebar-extended: 230px; /* width of each tab when not hidden */
+    --autohide-sidebar-collapsed: 34px; /* width of each tab when hidden
+    --sidebar-height: 100vh;
 }
 ```
 
