@@ -3,7 +3,9 @@
 
 Originally Created: 03/13/2021 Edited: 11/28/2022 
 
-Colorful Sidebery tabs created by me and minimalist buttons taken from [here](https://github.com/MrOtherGuy/firefox-csshacks)
+`menuShow`, `sideberyMods`, `darkContextMenu`, and `sideberyTweaks`
+were either created by me or heavily modified by me
+everything else is stolen from [MrOtherGuy](https://github.com/MrOtherGuy/firefox-csshacks)
 
 [Preview](https://imgur.com/a/s1wzdQZ)
 
