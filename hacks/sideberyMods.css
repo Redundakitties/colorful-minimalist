@@ -17,9 +17,15 @@
 }
 
 /* width of panel (grey box):hover */
-#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
-    width: var(--autohide-sidebar-extended) !important;
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) 
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]):hover,
+/* width of panel header - use if your header is shown */
+/* #main-window[tabsintitlebar="true"]:not([extradragspace="true"]) 
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header, */
+/* width of each tab */
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) 
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
+  width: var(--autohide-sidebar-extended) !important;
 }
 
 /* normal website page right margin */
