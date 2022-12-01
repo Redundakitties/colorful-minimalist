@@ -1,0 +1,44 @@
+:root {
+    --autohide-sidebar-extended: 230px; /* width of panel extended */
+    --autohide-sidebar-collapsed: 34px; /* width of panel collapsed */
+    --sidebar-height: 100vh;
+}
+
+/* --------Sidebery Auto-hiding Sidebar ----------- */
+/* width of panel (grey box) (different from width of each tab) */
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) {
+    width: var(--autohide-sidebar-collapsed) !important;
+    min-width: unset !important;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+/* width of panel (grey box) on hover */
+/* uncomment this section if you want the webpage to move when your tabs are extended- otherwise covers */ 
+/* #main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]):hover {
+    width: var(--autohide-sidebar-extended) !important;
+    min-width: unset !important;
+    z-index: 1;
+} */
+
+/* width of tabs */
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) 
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
+  width: var(--autohide-sidebar-collapsed) !important;
+  transition: all 0.2s ease-in-out;
+}
+/* width of tabs on hover */
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) 
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover #sidebar {
+  width: var(--autohide-sidebar-extended)  !important;
+}
+
+/* adjust if your sidebery is not tall enough */
+#main-window:not([extradragspace="true"])[inFullscreen]
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"],
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+    height: var(--sidebar-height);
+}
