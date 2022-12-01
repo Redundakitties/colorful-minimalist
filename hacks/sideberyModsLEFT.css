@@ -11,7 +11,7 @@
     width: var(--autohide-sidebar-collapsed) !important;
     min-width: unset !important;
     z-index: 1;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; /* doesn't do anything unless you uncomment lower bit of code */
 }
 
 /* width of panel (grey box) on hover */
