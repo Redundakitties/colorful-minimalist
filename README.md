@@ -8,7 +8,6 @@ were either created by me or heavily modified by me
 everything else is stolen from [MrOtherGuy](https://github.com/MrOtherGuy/firefox-csshacks)
 
 
-
 https://user-images.githubusercontent.com/38409600/204728178-7745f2c9-e6e2-4917-8de6-648609f0746d.mp4
 
 
@@ -45,9 +44,13 @@ Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css]
     --sidebar-height: 100vh;
 }
 ```
+Now includes css for people who want their sidebar on the left: `sideberyModsLEFT.css`. Either import it instead of sideberyMods or copy and paste the code into sideberyMods to replace it. 
 
 
 ## Changelog
+
+11/30
+- added sideberyModsLEFT.css
 
 11/28/2022
 - fixed autohide because it broke
