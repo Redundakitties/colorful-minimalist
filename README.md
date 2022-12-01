@@ -45,7 +45,7 @@ Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css]
 ```
 :root {
     --autohide-sidebar-extended: 230px; /* width of each tab when not hidden */
-    --autohide-sidebar-collapsed: 34px; /* width of each tab when hidden
+    --autohide-sidebar-collapsed: 34px; /* width of each tab when hidden */
     --sidebar-height: 100vh;
 }
 ```
