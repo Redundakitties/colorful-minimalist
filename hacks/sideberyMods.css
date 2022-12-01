@@ -1,31 +1,31 @@
 :root {
-    --autohide-sidebar-extended: 230px; /* width of each tab extended */
-    --autohide-sidebar-collapsed: 34px; /* width of each tab collapsed */
-    --sidebar-height: 100vh; /* height of sidebery */
+    --autohide-sidebar-extended: 230px; /* width of tab panel shown */
+    --autohide-sidebar-collapsed: 34px; /* width of tab panel hidden */
+    --sidebar-height: 100vh;
 }
 
 /* -------------------------- Sidebery Auto-hiding Sidebar ------------------------ */
 /* width of panel (grey box) (different from width of each tab) */
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"])
-    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) {
-    position: fixed;
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) {
+    position: absolute;
     right: 0px;
     width: var(--autohide-sidebar-collapsed) !important;
     min-width: unset !important;
     z-index: 1;
     transition: all 0.2s ease-in-out;
 }
-
 /* width of panel (grey box):hover */
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"]) 
-    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]):hover,
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]):hover,
 /* width of panel header - use if your header is shown */
 /* #main-window[tabsintitlebar="true"]:not([extradragspace="true"]) 
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header, */
 /* width of each tab */
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"]) 
-    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
   width: var(--autohide-sidebar-extended) !important;
+
 }
 
 /* normal website page right margin */
@@ -34,11 +34,16 @@
 ~ #appcontent {
     margin-right: var(--autohide-sidebar-collapsed);
 }
+/* when youtube full screen */
+#main-window:not([extradragspace="true"])[inFullscreen][inDOMFullscreen] 
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) 
+~ #appcontent {
+  margin-right: 0 !important;
+}
 
-/* adjust if your sidebery is not tall enough */
 #main-window:not([extradragspace="true"])[inFullscreen]
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"],
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"])
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-    height: var(--sidebar-height); 
+    height: var(--sidebar-height); /* adjust if your sidebery is not tall enough */
 }
