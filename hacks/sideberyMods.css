@@ -25,7 +25,6 @@
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"]) 
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
   width: var(--autohide-sidebar-extended) !important;
-
 }
 
 /* normal website page right margin */
@@ -41,9 +40,10 @@
   margin-right: 0 !important;
 }
 
+/* adjust if your sidebery is not tall enough */
 #main-window:not([extradragspace="true"])[inFullscreen]
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"],
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"])
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-    height: var(--sidebar-height); /* adjust if your sidebery is not tall enough */
+    height: var(--sidebar-height); 
 }
