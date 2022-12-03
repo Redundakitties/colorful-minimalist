@@ -1,7 +1,7 @@
 # some-sidebery-tweaks
 **Tested on Firefox 107.0 (64-bit, Windows 11)**
 
-Originally Created: 03/13/2021 Edited: 11/30/2022 
+Originally Created: 03/13/2021 Edited: 12/2/2022 
 
 `menuShow`, `sideberyMods`, `darkContextMenu`, and `sideberyTweaks`
 were either created by me or heavily modified by me
@@ -49,13 +49,20 @@ Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css]
     --sidebar-height: 100vh;
 }
 ```
-Now includes css for people who want their sidebar on the left: `sideberyModsLEFT.css`. Either import it instead of sideberyMods or copy and paste the code into sideberyMods to replace it. 
-
+There are three sideberyMod* files, I will try to explain why they're different and why you might want to use them. All three are interchangable, you only need one to maintain the auto-hiding functionality of my mod. 
+File | Side | Explanation 
+--- | --- | ---
+*sideberyMods.css* | Right |• Covers window-content when hovered <br>• Hides by changing width of panel
+*sideberyModsLeft.css*  | Left |• By default covers window-content when hovered <br>• Hides by changing width of panel
+*sideberyModsLeftSlide.css* | Left |• Covers window-content on hover <br>• Hides by sliding back and forth
 
 ## Changelog
 
+12/2
+- added `sideberyModsLeftSlide.css`
+
 11/30
-- added sideberyModsLEFT.css
+- added `sideberyModsLEFT.css`
 
 11/28/2022
 - fixed autohide because it broke
