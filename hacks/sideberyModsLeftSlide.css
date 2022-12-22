@@ -6,7 +6,7 @@
 
 /* --------Sidebery Auto-hiding Sidebar ----------- */
 /* hides panel by pushing it off screen */
-#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+#main-window:not([extradragspace="true"])
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) {
     position: fixed;
     left: calc(-1 * var(--sidebar-width) + var(--sidebar-shown));
@@ -15,7 +15,7 @@
 }
 
 /* moves panel back to 0 on hover */
-#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+#main-window:not([extradragspace="true"])
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]):hover {
     position: fixed;
     left: 0px;
@@ -23,9 +23,9 @@
 }
 
 /* fixed width of each tab. does not change */
-#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+#main-window:not([extradragspace="true"])
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"],
-#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) 
+#main-window:not([extradragspace="true"]) 
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
   width: var(--sidebar-width) !important;
 }
@@ -33,7 +33,7 @@
 /* adjust if your sidebery is not tall enough */
 #main-window:not([extradragspace="true"])[inFullscreen]
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"],
-#main-window[tabsintitlebar="true"]:not([extradragspace="true"])
+#main-window:not([extradragspace="true"])
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
     height: var(--sidebar-height);
 }
