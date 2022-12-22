@@ -58,6 +58,10 @@ File | Side | Explanation
 
 ## Changelog
 
+12/21
+- removed tabsintitlebar selector because it's not necessary and was breaking the css for machines where
+tabsintitlebar=false. 
+
 12/2
 - added `sideberyModsLeftSlide.css`
 
