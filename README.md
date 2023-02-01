@@ -1,7 +1,8 @@
 # some-sidebery-tweaks
 **Tested on Firefox 107.0 (64-bit, Windows 11)**
+[Sidebery beta v5](https://github.com/mbnuqw/sidebery/releases) (5.0.0b30)
 
-Originally Created: 03/13/2021 Edited: 12/2/2022 
+Originally Created: 03/13/2021 Edited: 2/1/2023
 
 `menuShow`, `sideberyMods`, `darkContextMenu`, and `sideberyTweaks`
 were either created by me or heavily modified by me
@@ -14,8 +15,6 @@ https://user-images.githubusercontent.com/38409600/204728178-7745f2c9-e6e2-4917-
 
 [Reddit Post](https://www.reddit.com/r/FirefoxCSS/comments/z8k0a5/a_few_sidebery_and_firefox_tweaks_v20_2_years/)
 and useful links:
-
-• [Sidebery beta v5](https://github.com/mbnuqw/sidebery/releases)
 
 • [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-color/) for matching sidebery's color with the tab's color
 
