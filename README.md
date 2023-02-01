@@ -1,22 +1,21 @@
 # some-sidebery-tweaks
 **Tested on Firefox 107.0 (64-bit, Windows 11)**
-[Sidebery beta v5](https://github.com/mbnuqw/sidebery/releases) (5.0.0b30)
 
 Originally Created: 03/13/2021 Edited: 2/1/2023
+
+• [Sidebery beta v5](https://github.com/mbnuqw/sidebery/releases) (5.0.0b30)
 
 `menuShow`, `sideberyMods`, `darkContextMenu`, and `sideberyTweaks`
 were either created by me or heavily modified by me
 everything else is stolen from [MrOtherGuy](https://github.com/MrOtherGuy/firefox-csshacks)
 
+• [Reddit Post](https://www.reddit.com/r/FirefoxCSS/comments/z8k0a5/a_few_sidebery_and_firefox_tweaks_v20_2_years/)
+
+• [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-color/) for matching sidebery's color with the tab's color
+
 
 https://user-images.githubusercontent.com/38409600/204728178-7745f2c9-e6e2-4917-8de6-648609f0746d.mp4
 
-
-
-[Reddit Post](https://www.reddit.com/r/FirefoxCSS/comments/z8k0a5/a_few_sidebery_and_firefox_tweaks_v20_2_years/)
-and useful links:
-
-• [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-color/) for matching sidebery's color with the tab's color
 
 # Setup
 
@@ -56,17 +55,14 @@ File | Side | Explanation
 *sideberyModsLeftSlide.css* | Left |• Covers window-content on hover <br>• Hides by sliding back and forth
 
 ## Changelog
-
-12/21
-- removed tabsintitlebar selector because it's not necessary and was breaking the css for machines where
+<details>
+	
+  <summary>2/1 - updated sidebery to b30 </summary>
+	
+12/21 - removed tabsintitlebar selector because it's not necessary and was breaking the css for machines where
 tabsintitlebar=false. 
-
-12/2
-- added `sideberyModsLeftSlide.css`
-
-11/30
-- added `sideberyModsLEFT.css`
-
+12/2 - added `sideberyModsLeftSlide.css`
+11/30 - added `sideberyModsLEFT.css`
 11/28/2022
 - fixed autohide because it broke
 - removed weird purple top left square from menuShow.css
@@ -74,6 +70,7 @@ tabsintitlebar=false.
 	- due to updating sidebery, had to change a bunch of sideberyTweaks.txt
 	- made a new file for this called sideberyTweaksv5.txt
 - removed [custom_menupopup_check_icons.css](https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/custom_menupopup_check_icons.css)
+</details>
 
 ## Contact
 
