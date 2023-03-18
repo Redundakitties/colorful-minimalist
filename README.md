@@ -1,13 +1,15 @@
 # some-sidebery-tweaks
-**Tested on Firefox 107.0 (64-bit, Windows 11)**
+**Tested on Firefox 111.0 (64-bit, Windows 11)**
 
-Originally Created: 03/13/2021 Edited: 2/1/2023
+Originally Created: 03/13/2021 Edited: 3/18/2023
 
 • [Sidebery beta v5](https://github.com/mbnuqw/sidebery/releases) (5.0.0b30)
 
 `menuShow`, `sideberyMods`, `darkContextMenu`, and `sideberyTweaks`
 were either created by me or heavily modified by me
-everything else is stolen from [MrOtherGuy](https://github.com/MrOtherGuy/firefox-csshacks)
+everything else is stolen from [MrOtherGuy](https://github.com/MrOtherGuy/firefox-csshacks).
+
+Huge thanks to my friend nearcatch for helping me debug and for giving me the original code for sideberyMods.
 
 • [Reddit Post](https://www.reddit.com/r/FirefoxCSS/comments/z8k0a5/a_few_sidebery_and_firefox_tweaks_v20_2_years/)
 
@@ -17,7 +19,7 @@ everything else is stolen from [MrOtherGuy](https://github.com/MrOtherGuy/firefo
 https://user-images.githubusercontent.com/38409600/204728178-7745f2c9-e6e2-4917-8de6-648609f0746d.mp4
 
 
-# Setup
+# Colored Tabs Setup
 
 Once you have your userChrome.css file set up following [these](https://www.reddit.com/r/FirefoxCSS/comments/73dvty/tutorial_how_to_create_and_livedebug_userchromecss/) instructions, (and you have sidebery installed) follow these steps: 
 
@@ -27,11 +29,20 @@ Once you have your userChrome.css file set up following [these](https://www.redd
 
 Changing the links will allow you to customize what tabs you want colored.
 
-```
+```css
 .Tab[title*="https://github.com"], .PinnedTab[title*="https://github.com"] {
 	--tabs-bg-hover: var(--white); /* default hover background */
 	--tabs-bg-active: var(--white); /* default mouse-pressed background */
 	--tabs-activated-bg: var(--white); /* default current background */
+}
+```
+
+In the betav5 the variables have changed, use this template instead:
+```css
+.Tab[title*="https://stackoverflow.com"], .PinnedTab[title*="https://stackoverflow.com"] {
+	--hover-bg: var(--orange);
+    	--clicked-bg: var(--orange);
+	--tabs-activated-bg: var(--orange); 
 }
 ```
 
@@ -40,14 +51,14 @@ Changing the links will allow you to customize what tabs you want colored.
 
 ## Auto Hiding Sidebar
 Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css](https://github.com/Redundakitties/colorful-minimalist/blob/main/hacks/sideberyMods.css). The specific variables you should tinker with are these: 
-```
+```css
 :root {
-    --autohide-sidebar-extended: 230px; /* width of each tab when not hidden */
+    --autohide-sidebar-extended: 230px; /* width of each tab when shown */
     --autohide-sidebar-collapsed: 34px; /* width of each tab when hidden */
     --sidebar-height: 100vh;
 }
 ```
-There are three sideberyMod* files, I will try to explain why they're different and why you might want to use them. All three are interchangable, you only need one to maintain the auto-hiding functionality of my mod. 
+There are three sideberyMod* files, I will try to explain why they're different and why you might want to use them. All three are interchangable, you only need one to maintain the auto-hiding functionality of the mod. 
 File | Side | Explanation 
 --- | --- | ---
 *sideberyMods.css* | Right |• Covers window-content when hovered <br>• Hides by changing width of panel
@@ -56,9 +67,8 @@ File | Side | Explanation
 
 ## Changelog
 <details>
-	
-  <summary>2/1 - updated sidebery to b30 </summary>
-	
+<summary>3/18 updated out of date parts of my readme, created some code to handle if the sidebar-header is shown. (see issue https://github.com/Redundakitties/colorful-minimalist/issues/4) </summary>
+2/1 - updated sidebery to b30
 12/21 - removed tabsintitlebar selector because it's not necessary and was breaking the css for machines where
 tabsintitlebar=false. 
 12/2 - added `sideberyModsLeftSlide.css`
