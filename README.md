@@ -51,8 +51,8 @@ There are three sideberyMod* files, I will try to explain why they're different 
 File | Side | Explanation 
 --- | --- | ---
 *sideberyMods.css* | Right |• Covers window-content when hovered <br>• Hides by changing width of panel
-*sideberyModsLeft.css*  | Left |• By default covers window-content when hovered <br>• Hides by changing width of panel
-*sideberyModsLeftSlide.css* | Left |• Covers window-content on hover <br>• Hides by sliding back and forth
+*sideberyModsLEFT.css*  | Left |• By default covers window content when hovered <br>• Hides by changing width of panel
+*sideberyModsLeftSlide.css* | Left |• Covers window content on hover <br>• Hides by sliding back and forth<br>• Make sure to change pinned tabs to globally-right in sidebery settings
 
 ## Changelog
 <details>
