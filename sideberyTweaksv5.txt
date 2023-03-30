@@ -109,22 +109,11 @@
 .PinnedTab[title*="https://messages.google.com"],
  .Tab[title*="https://discord.com"], 
 .PinnedTab[title*="https://discord.com"],
-.Tab[title*="https://www.fanfiction.net"], 
-.PinnedTab[title*="https://www.fanfiction.net"],
 .Tab[title*="https://mail.google.com"], 
 .PinnedTab[title*="https://mail.google.com"] {
 	--hover-bg: var(--blue); 
 	--clicked-bg: var(--blue); 
 	--tabs-activated-bg: var(--blue); 
-}
-
-.Tab[title*="https://learn.rochester.edu"], 
-.PinnedTab[title*="https://learn.rochester.edu"], 
-.Tab[title*="https://www.cs.rochester.edu"], 
-.PinnedTab[title*="https://www.cs.rochester.edu"]{
-	--hover-bg: var(--black); 
-	--clicked-bg: var(--black); 
-	--tabs-activated-bg: var(--black); 
 }
 
 /* ----------- Pinned Tab Bar Shadow ----------- */
