@@ -49,7 +49,7 @@ In the betav5 the variables have changed, use this template instead:
 }
 ```
 I hope they revert this change as this seems so much more clunky :/
-But it appears that --hover-bg and --clicked-bg no longer exist 
+But it appears that `--hover-bg` and `--clicked-bg` no longer exist 
 
 2) Copy the userChrome.css from here into your userChrome.css you set up, and paste the hacks folder into your chrome folder.
 3) If you're interested in the "Open in New Private Tab" option, check out this [github](https://github.com/xiaoxiaoflood/firefox-scripts) for instructions.
