@@ -40,12 +40,16 @@ Changing the links will allow you to customize what tabs you want colored.
 
 In the betav5 the variables have changed, use this template instead:
 ```css
-.Tab[title*="https://stackoverflow.com"], .PinnedTab[title*="https://stackoverflow.com"] {
-	--hover-bg: var(--orange);
-    	--clicked-bg: var(--orange);
-	--tabs-activated-bg: var(--orange); 
+.Tab[title*="https://github.com"], 
+.PinnedTab[title*="https://github.com"] {
+	--tabs-activated-bg: var(--white); /* default current background */
+}
+.Tab[title*="https://github.com"]:hover { 
+	--frame-el-bg: var(--white); /* on hover background */
 }
 ```
+I hope they revert this change as this seems so much more clunky :/
+But it appears that --hover-bg and --clicked-bg no longer exist 
 
 2) Copy the userChrome.css from here into your userChrome.css you set up, and paste the hacks folder into your chrome folder.
 3) If you're interested in the "Open in New Private Tab" option, check out this [github](https://github.com/xiaoxiaoflood/firefox-scripts) for instructions.
@@ -75,8 +79,9 @@ Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css]
 ## Changelog
 <details>
 <!-- Necessary blank line -->
-<summary>3/18 updated out of date parts of my readme (updated for b31), created some code to handle if the sidebar-header is shown (see issue https://github.com/Redundakitties/colorful-minimalist/issues/4) </summary>
+<summary> Fixed colored tabs setup instructions </summary>
 
++ 3/18 updated out of date parts of my readme (updated for b31), created some code to handle if the sidebar-header is shown (see issue https://github.com/Redundakitties/colorful-minimalist/issues/4) 
 + 2/1 - updated sidebery to b30
 + 12/21 - removed tabsintitlebar selector because it's not necessary and was breaking the css for machines where tabsintitlebar=false. 
 + 12/2 - added `sideberyModsLeftSlide.css`
