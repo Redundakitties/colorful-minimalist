@@ -32,11 +32,6 @@
 	--tabs-bg-active: var(--green); 
 	--tabs-activated-bg: var(--green); 
 }
-.Tab[title*="https://learn.rochester.edu"], .PinnedTab[title*="https://learn.rochester.edu"] {
-	--tabs-bg-hover: var(--black); 
-	--tabs-bg-active: var(--black); 
-	--tabs-activated-bg: var(--black); 
-}
 .Tab[title*="https://keep.google.com"], .PinnedTab[title*="https://keep.google.com"] {
 	--tabs-bg-hover: var(--yellow); 
 	--tabs-bg-active: var(--yellow); 
