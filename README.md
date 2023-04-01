@@ -43,9 +43,7 @@ In the betav5 the variables have changed, use this template instead:
 .Tab[title*="https://github.com"], 
 .PinnedTab[title*="https://github.com"] {
 	--tabs-activated-bg: var(--white); /* default current background */
-}
-.Tab[title*="https://github.com"]:hover { 
-	--frame-el-bg: var(--white); /* on hover background */
+	--frame-el-overlay-hover-bg: var(--white); /* hover bg */
 }
 ```
 I hope they revert this change as this seems so much more clunky :/
