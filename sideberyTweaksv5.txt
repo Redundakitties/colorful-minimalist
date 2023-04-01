@@ -1,3 +1,4 @@
+#root.root {--frame-el-overlay-hover-bg: #ed0e29ff;}
 #root.root {--tabs-indent: 15px;}
 #root.root {--tabs-height: 32px;}
 #root.root {--ctx-menu-fg: whitesmoke;}
@@ -11,11 +12,14 @@
 #root.root {--tabs-font: 1rem JetBrains Mono;}
 
 /* ----------- Tab title styles ----------- */
+
 .Tab .title {
 		transition: all 5s ease;
 		display: inline-block;
 } /* enable scrolling */
 .Tab:hover .title {margin-left: -10rem;}
+
+.Tab .ctx { left: 1px; }
 
 .Tab[data-discarded="true"] .title { 
     text-decoration: line-through; 
@@ -57,9 +61,83 @@
 .Tab[title*="https://github.com"], 
 .PinnedTab[title*="https://github.com"] {
 	--tabs-activated-bg: var(--white); /* current background */
+	--frame-el-overlay-hover-bg: var(--white); /* hover bg */
 }
-.Tab[title*="https://github.com"]:hover { 
-	--frame-el-bg: var(--white); /* --hover-bg */
+
+.Tab[title*="https://www.quora.com"], 
+.PinnedTab[title*="https://www.quora.com"],
+.Tab[title*="https://archiveofourown.org"], 
+.PinnedTab[title*="https://archiveofourown.org"],
+.Tab[title*="https://www.reddit.com"], 
+.PinnedTab[title*="https://www.reddit.com"], 
+.Tab[title*="https://www.youtube.com"], 
+.PinnedTab[title*="https://www.youtube.com"] {
+    --frame-el-overlay-hover-bg: var(--red);
+    --clicked-bg: var(--red);
+    --tabs-activated-bg: var(--red); 
+}
+
+.Tab[title*="https://stackoverflow.com"], 
+.PinnedTab[title*="https://stackoverflow.com"] {
+	--frame-el-overlay-hover-bg: var(--orange);
+    --clicked-bg: var(--orange);
+	--tabs-activated-bg: var(--orange); 
+}
+
+.Tab[title*="https://drive.google.com"], 
+.PinnedTab[title*="https://drive.google.com"] {
+	--frame-el-overlay-hover-bg: var(--yellow);
+   	--clicked-bg: var(--yellow);
+	--tabs-activated-bg: var(--yellow); 
+}
+
+.Tab[title*="https://app.element.io"], 
+.PinnedTab[title*="https://www.app.element.io"],
+.Tab[title*="https://docs.google.com/spreadsheets"], 
+.PinnedTab[title*="https://docs.google.com/spreadsheets"],
+.Tab[title*="https://imgur.com/"], 
+.PinnedTab[title*="https://imgur.com/"] {
+    --frame-el-overlay-hover-bg: var(--green);
+    --clicked-bg: var(--green);
+    --tabs-activated-bg: var(--green); 
+}
+
+.Tab[title*="https://www.linkedin.com"], 
+.PinnedTab[title*="https://www.linkedin.com"],
+.Tab[title*="https://docs.google.com/document"],
+.PinnedTab[title*="https://docs.google.com/document"] {
+	--frame-el-overlay-hover-bg: var(--lightblue); 
+	--clicked-bg: var(--lightblue); 
+	--tabs-activated-bg: var(--lightblue); 
+}
+
+.Tab[title*="https://messages.google.com"], 
+.PinnedTab[title*="https://messages.google.com"],
+ .Tab[title*="https://discord.com"], 
+.PinnedTab[title*="https://discord.com"],
+.Tab[title*="https://www.fanfiction.net"], 
+.PinnedTab[title*="https://www.fanfiction.net"],
+.Tab[title*="https://mail.google.com"], 
+.PinnedTab[title*="https://mail.google.com"] {
+	--frame-el-overlay-hover-bg: var(--blue); 
+	--clicked-bg: var(--blue); 
+	--tabs-activated-bg: var(--blue); 
+}
+
+.Tab[title*="https://www.twitch.tv/"], 
+.PinnedTab[title*="https://www.twitch.tv/"] {
+	--frame-el-overlay-hover-bg: var(--purple); 
+	--clicked-bg: var(--purple); 
+	--tabs-activated-bg: var(--purple); 
+}
+
+.Tab[title*="https://learn.rochester.edu"], 
+.PinnedTab[title*="https://learn.rochester.edu"], 
+.Tab[title*="https://www.cs.rochester.edu"], 
+.PinnedTab[title*="https://www.cs.rochester.edu"]{
+	--frame-el-overlay-hover-bg: var(--black); 
+	--clicked-bg: var(--black); 
+	--tabs-activated-bg: var(--black); 
 }
 
 /* ----------- Pinned Tab Bar Shadow ----------- */
