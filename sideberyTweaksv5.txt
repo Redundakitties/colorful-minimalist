@@ -14,11 +14,14 @@
 /* ----------- Tab title styles ----------- */
 
 .Tab .title {
-		transition: all 5s ease;
-		display: inline-block;
-} /* enable scrolling */
+  transition: all 5s ease;
+  display: inline-block;
+} 
+
+/* enable scrolling */
 .Tab:hover .title {margin-left: -10rem;}
 
+/* moves container indicator to the left */
 .Tab .ctx { left: 1px; }
 
 .Tab[data-discarded="true"] .title { 
