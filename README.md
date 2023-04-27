@@ -58,11 +58,11 @@ But it appears that `--hover-bg` and `--clicked-bg` no longer exist
 <summary>Instructions on the autohiding sidebar files</summary>
 
 There are three sideberyMod files, I will try to explain why they're different and why you might want to use them. All three are interchangable, you only need one to maintain the auto-hiding functionality of the mod. 
-File | Side | Explanation 
---- | --- | ---
-*sideberyMods.css* | Right |• Covers window-content when hovered <br>• Hides by changing width of panel
-*sideberyModsLEFT.css*  | Left |• By default covers window content when hovered <br>• Hides by changing width of panel
-*sideberyModsLeftSlide.css* | Left |• Covers window content on hover <br>• Hides by sliding back and forth<br>• Make sure to change pinned tabs to globally-right in sidebery settings
+File | Side | Explanation | Video Link
+--- | --- | --- | ---
+*sideberyMods.css* | Right |• Covers window-content when hovered <br>• Hides by changing width of panel | <img src="https://user-images.githubusercontent.com/38409600/234763194-a3fcedc6-5c8c-466a-b7ad-41afb1aa72c9.gif" align="center" width="150">
+*sideberyModsLEFT.css*  | Left |• By default covers window content when hovered <br>• Hides by changing width of panel | <img src="https://user-images.githubusercontent.com/38409600/234763227-9b4a3da4-5322-458f-89a0-9f9e449ed7a9.gif" align="center" width="150">
+*sideberyModsLeftSlide.css* | Left |• Covers window content on hover <br>• Hides by sliding back and forth<br>• Make sure to change pinned tabs to globally-right in sidebery settings | <img src="https://user-images.githubusercontent.com/38409600/234763781-1e36691d-ec58-440d-9e9a-60fce33b091c.gif" align="center" width="150"> 
 
 Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css](https://github.com/Redundakitties/colorful-minimalist/blob/main/hacks/sideberyMods.css). The specific variables you should tinker with are these: 
 ```css
