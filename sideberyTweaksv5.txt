@@ -13,6 +13,9 @@
 
 /* ----------- Tab title styles ----------- */
 
+/* tabs indent when hovering over sidebar. Useful when using the left sidebar variant */
+/* .ScrollBox:not(:hover) {--tabs-indent: 0px;} */
+
 .Tab .title {
   transition: all 5s ease;
   display: inline-block;
