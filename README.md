@@ -60,9 +60,9 @@ But it appears that `--hover-bg` and `--clicked-bg` no longer exist
 There are three sideberyMod files, I will try to explain why they're different and why you might want to use them. All three are interchangable, you only need one to maintain the auto-hiding functionality of the mod. 
 File | Side | Explanation | Video Link
 --- | --- | --- | ---
-[*sideberyMods.css*](https://github.com/Redundakitties/colorful-minimalist/blob/main/hacks/sideberyMods.css) | Right |• Covers window-content when hovered <br>• Hides by changing width of panel | <img src="https://user-images.githubusercontent.com/38409600/234763194-a3fcedc6-5c8c-466a-b7ad-41afb1aa72c9.gif" align="center" width="150">
-[*sideberyModsLEFT.css*](https://github.com/Redundakitties/colorful-minimalist/blob/main/hacks/sideberyModsLEFT.css) | Left |• By default covers window content when hovered <br>• Hides by changing width of panel | <img src="https://user-images.githubusercontent.com/38409600/234763227-9b4a3da4-5322-458f-89a0-9f9e449ed7a9.gif" align="center" width="150">
-[*sideberyModsLeftSlide.css*](https://github.com/Redundakitties/colorful-minimalist/blob/main/hacks/sideberyModsLeftSlide.css) | Left |• Covers window content on hover <br>• Hides by sliding back and forth<br>• Make sure to change pinned tabs to globally-right in sidebery settings | <img src="https://user-images.githubusercontent.com/38409600/234763781-1e36691d-ec58-440d-9e9a-60fce33b091c.gif" align="center" width="150"> 
+[*sideberyMods.css*](https://github.com/Redundakitties/colorful-minimalist/blob/main/hacks/sideberyMods.css) | Right |• Covers window-content when hovered <br>• Hides by changing width of panel | <img src="https://user-images.githubusercontent.com/38409600/234763194-a3fcedc6-5c8c-466a-b7ad-41afb1aa72c9.gif" align="center" width="120">
+[*sideberyModsLEFT.css*](https://github.com/Redundakitties/colorful-minimalist/blob/main/hacks/sideberyModsLEFT.css) | Left |• By default covers window content when hovered <br>• Hides by changing width of panel <br>• If you uncomment `.ScrollBox:not(:hover) {--tabs-indent: 0px;}` in sideberyTweaksv5.txt you get this effect| <img src="https://user-images.githubusercontent.com/38409600/235023717-e0c6d5ba-fb6f-4053-9811-47449cfe7376.gif" alt="demo" align="center" width="120"> 
+[*sideberyModsLeftSlide.css*](https://github.com/Redundakitties/colorful-minimalist/blob/main/hacks/sideberyModsLeftSlide.css) | Left |• Covers window content on hover <br>• Hides by sliding back and forth<br>• Make sure to change pinned tabs to globally-right in sidebery settings | <img src="https://user-images.githubusercontent.com/38409600/234763781-1e36691d-ec58-440d-9e9a-60fce33b091c.gif" align="center" width="120"> 
 
 Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css](https://github.com/Redundakitties/colorful-minimalist/blob/main/hacks/sideberyMods.css). The specific variables you should tinker with are these: 
 ```css
@@ -77,8 +77,10 @@ Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css]
 ## Changelog
 <details>
 <!-- Necessary blank line -->
-<summary> Fixed colored tabs setup instructions </summary>
+<summary> 4/27 Added ability show indented tabs on hover <a href="https://user-images.githubusercontent.com/38409600/235023717-e0c6d5ba-fb6f-4053-9811-47449cfe7376.gif">demo</a>
+</summary>
 
++ 4/1 Fixed colored tabs setup instructions
 + 3/18 updated out of date parts of my readme (updated for b31), created some code to handle if the sidebar-header is shown (see issue https://github.com/Redundakitties/colorful-minimalist/issues/4) 
 + 2/1 - updated sidebery to b30
 + 12/21 - removed tabsintitlebar selector because it's not necessary and was breaking the css for machines where tabsintitlebar=false. 
