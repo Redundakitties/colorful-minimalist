@@ -3,7 +3,19 @@
 
 Originally Created: 03/13/2021 Edited: 3/18/2023
 
-• [Sidebery beta v5](https://github.com/mbnuqw/sidebery/releases) (5.0.0b31)
+• [Sidebery beta v5](https://github.com/mbnuqw/sidebery/releases) (**5.0.0b31**)
+
+> [!IMPORTANT]
+> Hello to anyone who reads this, for the forseeable future this repo _is no longer being maintained_.
+
+<details>
+<summary>
+A more long winded explanation here:
+</summary>
+I'm leaving everything just how it was (I don't really know the right etiquette for this) but I don't I have the capacity anymore to keep this up to date. I seem to be using Sidebery (v5.0.0rc4) at the time of writing this (9/7/23) and I have had no issues with dragging tabs around or my bookmarks bar clipping into the sidebar. 
+	Anyone is, of course, free to fork this repo and modify and answer and open issues as much as they'd like. Thank you for your time
+- redundakat
+</details>
 
 `menuShow`, `sideberyMods`, `darkContextMenu`, and `sideberyTweaks`
 were either created by me or heavily modified by me
