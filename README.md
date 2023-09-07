@@ -89,10 +89,10 @@ Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css]
 ## Changelog
 <details>
 <!-- Necessary blank line -->
-<summary> 4/27 Added ability show indented tabs on hover <a href="https://user-images.githubusercontent.com/38409600/235023717-e0c6d5ba-fb6f-4053-9811-47449cfe7376.gif">demo</a>
+<summary> 9/7 No longer maintaining repo for the forseeable future :/ (I just don't have the free time I once had anymore) 
 </summary>
 
-+ 9/7 No longer maintaining repo for the forseeable future :/ (I just don't have the free time I once had anymore) 
++ 4/27 Added ability show indented tabs on hover <a href="https://user-images.githubusercontent.com/38409600/235023717-e0c6d5ba-fb6f-4053-9811-47449cfe7376.gif">demo</a>
 + 4/1 Fixed colored tabs setup instructions
 + 3/18 updated out of date parts of my readme (updated for b31), created some code to handle if the sidebar-header is shown (see issue https://github.com/Redundakitties/colorful-minimalist/issues/4) 
 + 2/1 - updated sidebery to b30
