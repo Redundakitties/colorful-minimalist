@@ -92,6 +92,7 @@ Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css]
 <summary> 4/27 Added ability show indented tabs on hover <a href="https://user-images.githubusercontent.com/38409600/235023717-e0c6d5ba-fb6f-4053-9811-47449cfe7376.gif">demo</a>
 </summary>
 
++ 9/7 No longer maintaining repo for the forseeable future :/ (I just don't have the free time I once had anymore) 
 + 4/1 Fixed colored tabs setup instructions
 + 3/18 updated out of date parts of my readme (updated for b31), created some code to handle if the sidebar-header is shown (see issue https://github.com/Redundakitties/colorful-minimalist/issues/4) 
 + 2/1 - updated sidebery to b30
@@ -106,7 +107,3 @@ Code relating to autohiding the sidebar can be found in [hacks/sideberyMods.css]
 		- made a new file for this called sideberyTweaksv5.txt
 	- removed [custom_menupopup_check_icons.css](https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/custom_menupopup_check_icons.css)
 </details>
-
-## Contact
-
-If you have any questions don't hesitate to open an issue, I'll try to get to it as soon as I can.
